@@ -1,18 +1,24 @@
 /* ==========================================================================
-   RR Homes - Feature Section Component
+   Guru Ghar Estate (RR Homes) - Founder Spotlight Component Styling
    ========================================================================== */
 
 :root {
-    --fs-dark: #111827;
-    --fs-grey: #6b7280;
-    --fs-text: #4b5563;
-    --fs-bg: #fafafa;
+    --fs-bg: #fdfdfd;                 /* Elegant near-white gallery canvas */
+    --fs-dark: #302f35;               /* Charcoal grey matching the main dark theme */
+    --fs-gold: #d4af37;               /* Luxury brand gold */
+    --fs-gold-glow: rgba(212, 175, 55, 0.25);
+    
+    --fs-text: #4a4a4f;               /* Sophisticated charcoal body text */
+    --fs-text-light: #6c6c72;         /* Muted text */
+    
+    --fs-transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .feature-section {
-    padding: 100px 40px;
-    background: var(--fs-bg);
-    font-family: 'Poppins', sans-serif;
+    padding: 120px 40px;
+    background-color: var(--fs-bg);
+    font-family: 'Outfit', 'Poppins', sans-serif;
+    position: relative;
     overflow: hidden;
 }
 
@@ -21,153 +27,331 @@
     margin: 0 auto;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 80px;
 }
 
 /* ==========================================================================
-   LEFT: TEXT CONTENT
+   LEFT COLUMN - FOUNDER PORTRAIT (Double Border 3D Offsets)
+   ========================================================================== */
+.feature-visuals {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.portrait-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    height: 520px;
+}
+
+/* Golden outer frame offsets backwards */
+.portrait-gold-frame {
+    position: absolute;
+    top: 24px;
+    left: -24px;
+    width: 100%;
+    height: 100%;
+    border: 3px solid var(--fs-gold);
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.15), var(--fs-gold-glow);
+    z-index: 1;
+    transition: var(--fs-transition);
+}
+
+/* Foreground image portrait rises on top */
+.portrait-img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 6px solid #ffffff;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    z-index: 2;
+    transition: var(--fs-transition);
+}
+
+/* Micro-badge overlay naming Founder */
+.founder-badge {
+    position: absolute;
+    bottom: 30px;
+    right: -25px;
+    background: rgba(48, 47, 53, 0.96);
+    border-left: 4.5px solid var(--fs-gold);
+    padding: 15px 28px;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    z-index: 3;
+    transition: var(--fs-transition);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.founder-name {
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.founder-title {
+    color: var(--fs-gold);
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Interactive 3D physical translations on hover */
+.portrait-wrapper:hover .portrait-img {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.18);
+}
+
+.portrait-wrapper:hover .portrait-gold-frame {
+    transform: translate(8px, -8px);
+    box-shadow: 0 15px 35px rgba(212, 175, 55, 0.22);
+}
+
+.portrait-wrapper:hover .founder-badge {
+    transform: translateX(4px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.32);
+}
+
+/* ==========================================================================
+   RIGHT COLUMN - BRAND NARRATIVE & QUOTE BOARDS
    ========================================================================== */
 .feature-content {
-    flex: 1;
+    flex: 1.2;
+    max-width: 650px;
+}
+
+.founder-micro-tag {
+    display: inline-block;
+    background: rgba(212, 175, 55, 0.12);
+    color: var(--fs-gold);
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-size: 12.5px;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 .feature-content h2 {
-    font-family: 'Poppins', sans-serif; /* Using bold modern sans matching the image */
-    font-size: 34px;
-    color: var(--fs-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 44px;
     font-weight: 700;
-    margin-bottom: 25px;
-    line-height: 1.3;
-    letter-spacing: -0.5px;
+    color: var(--fs-dark);
+    line-height: 1.25;
+    margin-bottom: 12px;
 }
 
-.feature-intro {
-    font-size: 17px;
-    color: #888888;
-    margin-bottom: 40px;
-    font-weight: 300;
-    line-height: 1.6;
+.founder-title-underline {
+    width: 80px;
+    height: 3px;
+    background-color: var(--fs-gold);
+    margin-bottom: 28px;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.25);
 }
 
-.feature-list {
+.founder-intro {
+    color: var(--fs-text);
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+/* Value pillars vertical timeline style list */
+.founder-pillars {
     list-style: none;
     padding: 0;
+    margin: 0 0 35px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.founder-pillars li {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.pillar-bullet {
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+    background: rgba(212, 175, 55, 0.12);
+    color: var(--fs-gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    transition: var(--fs-transition);
+}
+
+.founder-pillars li:hover .pillar-bullet {
+    background: var(--fs-gold);
+    color: #ffffff;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+}
+
+.pillar-text strong {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--fs-dark);
+    margin-bottom: 4px;
+}
+
+.pillar-text p {
+    font-size: 14px;
+    color: var(--fs-text-light);
+    line-height: 1.6;
     margin: 0;
 }
 
-.feature-list li {
-    font-size: 15px;
-    color: var(--fs-text);
-    line-height: 1.8;
-    margin-bottom: 15px;
-    display: flex;
-    align-items: flex-start;
-    gap: 15px;
-    font-weight: 400;
+/* Elegant warm Quote Panel styling */
+.founder-quote-box {
+    background-color: #fdfaf3;
+    border-left: 4px solid var(--fs-gold);
+    padding: 22px 28px;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 5px 20px rgba(212, 175, 55, 0.04);
 }
 
-.bullet-point {
-    flex-shrink: 0;
-    width: 6px;
-    height: 6px;
-    background: #555555;
-    border-radius: 50%;
-    margin-top: 10px; /* Align strictly with text line */
+.quote-text {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 15.5px;
+    line-height: 1.75;
+    color: var(--fs-dark);
+    margin: 0 0 12px 0;
+    opacity: 0.95;
+}
+
+.quote-author-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quote-author-line {
+    width: 25px;
+    height: 1px;
+    background-color: var(--fs-gold);
+}
+
+.quote-author-name {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--fs-dark);
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 /* ==========================================================================
-   RIGHT: 3D COMPOSITE VISUALS
-   ========================================================================== */
-.feature-visuals {
-    flex: 1.2;
-    position: relative;
-    height: 480px;
-    border-radius: 4px;
-    overflow: hidden; /* Contains the background */
-}
-
-/* The Faded Street Background Layer */
-.visuals-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #e2e8f0; 
-}
-
-.visuals-bg img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.6; /* Perfectly fade it to act as context geometry */
-    filter: saturate(0.5); /* Desaturate slightly so foreground pops */
-}
-
-/* The Foreground Renders */
-.floating-cards {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 85%;
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    z-index: 2;
-}
-
-.float-card {
-    width: 50%;
-    background: #ffffff;
-    border-radius: 16px; /* Heavy curve matching the image */
-    overflow: hidden;
-    /* Clean white rim + deep drop shadow to create physical elevation */
-    box-shadow: 0 15px 35px rgba(0,0,0,0.1), 0 0 0 6px rgba(255,255,255,0.75);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.float-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 25px 45px rgba(0,0,0,0.15), 0 0 0 6px rgba(255,255,255,1);
-    z-index: 5;
-}
-
-.float-card img {
-    width: 100%;
-    height: 100%;
-    min-height: 280px;
-    object-fit: cover;
-    display: block;
-}
-
-
-/* ==========================================================================
-   RESPONSIVE DESIGN
+   RESPONSIVE DESIGN BREAKPOINTS
    ========================================================================== */
 @media screen and (max-width: 1200px) {
-    .feature-container { gap: 40px; }
-    .feature-content h2 { font-size: 30px; }
+    .feature-container {
+        gap: 50px;
+    }
+    
+    .feature-content h2 {
+        font-size: 38px;
+    }
+    
+    .portrait-wrapper {
+        height: 480px;
+    }
 }
 
 @media screen and (max-width: 992px) {
+    .feature-section {
+        padding: 90px 30px;
+    }
+    
     .feature-container {
         flex-direction: column;
+        gap: 60px;
     }
+    
     .feature-visuals {
         width: 100%;
-        margin-top: 20px;
+    }
+    
+    .portrait-wrapper {
+        max-width: 380px;
+        height: 460px;
+    }
+    
+    .founder-badge {
+        right: -15px;
+    }
+    
+    .feature-content {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .founder-title-underline {
+        margin: 0 auto 28px auto;
+    }
+    
+    .founder-pillars li {
+        text-align: left;
+    }
+    
+    .founder-quote-box {
+        text-align: left;
+        width: 100%;
+        box-sizing: border-box;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .feature-section { padding: 60px 20px; }
-    .feature-content h2 { font-size: 28px; }
-    .feature-list li { font-size: 14px; }
+    .feature-section {
+        padding: 70px 20px;
+    }
     
-    .feature-visuals { height: 350px; border-radius: 8px; }
-    .floating-cards { gap: 10px; width: 95%; }
-    .float-card { border-radius: 10px; }
-    .float-card img { min-height: 200px; }
-    .float-card { box-shadow: 0 10px 20px rgba(0,0,0,0.1), 0 0 0 4px rgba(255,255,255,0.7); }
+    .feature-content h2 {
+        font-size: 32px;
+    }
+    
+    .founder-intro {
+        font-size: 15px;
+    }
+    
+    .portrait-wrapper {
+        height: 420px;
+    }
+    
+    .founder-badge {
+        right: -10px;
+        padding: 12px 20px;
+    }
+    
+    .founder-name {
+        font-size: 15.5px;
+    }
 }
