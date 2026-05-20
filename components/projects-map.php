@@ -1,5 +1,5 @@
 <!-- components/projects-map.php -->
-<link rel="stylesheet" href="assets/css/projects-map.css">
+<link rel="stylesheet" href="assets/css/projects-map.css?v=<?= time() ?>">
 
 <section class="projects-map-section">
     <!-- Beautiful Glowing Ambient Overlay Elements -->
