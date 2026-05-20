@@ -79,7 +79,7 @@
                     <li>
                         <i class="fa-solid fa-location-dot"></i>
                         <div class="contact-info-block text-block">
-                            <strong>RR Homes / Guru Ghar Estate</strong><br>
+                            <strong>Guru Ghar Estate</strong><br>
                             Puri VIP Floors, Sector 81, Faridabad,<br>
                             Haryana 121007
                         </div>
@@ -103,7 +103,7 @@
     <!-- Bottom Strip -->
     <div class="footer-bottom">
         <div class="footer-bottom-container">
-            <p class="copyright-text">&copy; <?php echo date('Y'); ?> Guru Ghar Estate (RR Homes). All rights reserved.</p>
+            <p class="copyright-text">&copy; <?php echo date('Y'); ?> Guru Ghar Estate | All rights reserved.</p>
             <p class="mineib-credit">
                 Website Powered by
                 <a href="https://www.mineib.com" target="_blank" class="mineib-link">
