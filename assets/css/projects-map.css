@@ -23,7 +23,7 @@
 
 /* Base resets & Section wrapper */
 .projects-map-section {
-    padding: 120px 40px;
+    padding: 90px 40px;
     background: linear-gradient(135deg, var(--map-bg-slate) 0%, var(--map-bg-deep) 100%);
     font-family: 'Outfit', 'Poppins', sans-serif;
     position: relative;
@@ -255,15 +255,16 @@
     flex: 1.2;
     position: relative;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    gap: 24px;
     z-index: 2;
 }
 
 .map-wrapper {
     position: relative;
     width: 100%;
-    max-width: 480px;                 /* Sized compactly to fit elegantly beside text column */
+    max-width: 420px;                 /* Compact premium square constraint matching about section */
     border-radius: 16px;
     border: 2px solid rgba(255, 255, 255, 0.25);
     background: #ffffff;              /* Clean white background to blend perfectly with JPG */
@@ -373,16 +374,13 @@
    GLASSMORPHIC TOOLTIP DETAILS BOX OVERLAY
    ========================================================================== */
 .map-tooltip-box {
-    position: absolute;
-    bottom: -35px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    max-width: 440px;
+    position: relative;
+    width: 100%;
+    max-width: 420px;
     background: rgba(30, 29, 34, 0.82);
     border: 1.5px solid rgba(212, 175, 55, 0.25);
     border-radius: 12px;
-    padding: 24px;
+    padding: 20px 24px;
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), 0 0 20px rgba(212, 175, 55, 0.08);
@@ -507,13 +505,12 @@
     .p-map-visual {
         width: 100%;
         margin-top: 20px;
-        padding-bottom: 240px; /* Space room for tooltip overlay */
+        padding-bottom: 0;
     }
     
     .map-tooltip-box {
-        bottom: 0px;
         width: 100%;
-        max-width: 500px;
+        max-width: 420px;
     }
 }
 
