@@ -463,7 +463,7 @@ $active_page = $active_pageInfo['active_page'] ?? null;
         </div>
 
         <aside class="main-sidebar sidebar-light-primary elevation-4">
-            <a href="<?= $base_url ?>index.php" class="brand-link" style="background-color: #ffffff !important; border-bottom: 1px solid #f0f0f1 !important;">
+            <a href="<?= $base_url ?>index.php" class="brand-link" style="background-color: var(--primary-green) !important; border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;">
                 <img src="<?= $asset_url ?>gurgarestates-logo.png" alt="Logo" class="brand-image">
             </a>
             <div class="sidebar">
