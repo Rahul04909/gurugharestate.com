@@ -64,28 +64,10 @@
             <a href="projects.php" class="btn-primary map-cta-btn">View All Projects <i class="fa-solid fa-arrow-right"></i></a>
         </div>
 
-        <!-- Right Side: Interactive Map & Floating Visual Pins -->
+        <!-- Right Side: Interactive Map Visual -->
         <div class="p-map-visual">
             <div class="map-wrapper">
                 <img src="assets/delhi-ncr-map.jpg?v=<?= time() ?>" alt="Guru Ghar Estate Presence Map" class="main-map-img">
-                
-                <!-- Pulsing Golden Hotspot Pins mapped to Delhi NCR coordinates -->
-                <div class="map-pin pin-faridabad active" data-location="faridabad" title="Faridabad Headquarters (HQ)">
-                    <div class="pin-pulse"></div>
-                    <div class="pin-inner"></div>
-                </div>
-                <div class="map-pin pin-gurugram" data-location="gurugram" title="Gurugram Presence">
-                    <div class="pin-pulse"></div>
-                    <div class="pin-inner"></div>
-                </div>
-                <div class="map-pin pin-delhi" data-location="delhi" title="South Delhi Presence">
-                    <div class="pin-pulse"></div>
-                    <div class="pin-inner"></div>
-                </div>
-                <div class="map-pin pin-noida" data-location="noida" title="Noida Presence">
-                    <div class="pin-pulse"></div>
-                    <div class="pin-inner"></div>
-                </div>
             </div>
 
             <!-- Glassmorphic Tooltip Card displaying Active Location Details -->
@@ -152,21 +134,8 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     };
 
-    // 1. Entry scroll transitions using GSAP (Robust Section ScrollTrigger)
-    gsap.from(".p-map-content .p-map-badge, .p-map-content h2, .p-map-content .p-map-title-underline, .p-map-content .p-map-description, .map-location-selector .loc-card, .p-map-stats .stat-card, .p-map-content .map-cta-btn", {
-        opacity: 0,
-        y: 30,
-        duration: 0.8,
-        stagger: 0.1,
-        ease: "power2.out",
-        scrollTrigger: {
-            trigger: ".projects-map-section",
-            start: "top 75%",
-            toggleActions: "play none none none"
-        }
-    });
-
-    // Map visual boundaries reveal
+    // 1. Entry scroll transitions using GSAP (Only decorative containers for robust rendering)
+    // Left content loads statically by default to guarantee 100% visibility on all devices
     gsap.from(".p-map-visual .map-wrapper", {
         opacity: 0,
         scale: 0.95,
@@ -175,20 +144,6 @@ document.addEventListener("DOMContentLoaded", function() {
         scrollTrigger: {
             trigger: ".projects-map-section",
             start: "top 75%"
-        }
-    });
-
-    // Elastic dropping pins
-    gsap.from(".p-map-visual .map-pin", {
-        opacity: 0,
-        y: -40,
-        scale: 0,
-        duration: 1.2,
-        ease: "elastic.out(1, 0.5)",
-        stagger: 0.1,
-        scrollTrigger: {
-            trigger: ".projects-map-section",
-            start: "top 70%"
         }
     });
 
@@ -225,7 +180,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // 2. Interactive Selector Action Bindings
     const locCards = document.querySelectorAll(".loc-card");
-    const mapPins = document.querySelectorAll(".map-pin");
     const tooltipBox = document.querySelector(".map-tooltip-box");
 
     function activateLocation(locKey) {
@@ -234,28 +188,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Strip current active selections
         locCards.forEach(c => c.classList.remove("active"));
-        mapPins.forEach(p => p.classList.remove("active"));
 
-        // Set matching components as active
+        // Set matching card as active
         const targetCard = document.querySelector(`.loc-card[data-location="${locKey}"]`);
-        const targetPin = document.querySelector(`.map-pin[data-location="${locKey}"]`);
-        
         if (targetCard) targetCard.classList.add("active");
-        if (targetPin) targetPin.classList.add("active");
 
-        // Staggered bounce scale transition on pin to draw immediate focus
-        if (targetPin) {
-            gsap.fromTo(targetPin, 
-                { scale: 1 }, 
-                { scale: 1.35, duration: 0.25, yoyo: true, repeat: 1, ease: "power1.out" }
-            );
-        }
+        // Prevent layout transitions clashing by killing current animations
+        gsap.killTweensOf(tooltipBox);
 
         // GSAP dynamic crossfade for tooltip detail cards
         gsap.to(tooltipBox, {
             opacity: 0,
             y: 15,
-            duration: 0.2,
+            duration: 0.15,
             onComplete: function() {
                 // Update raw text nodes inside card bounds
                 document.getElementById("tooltip-title").textContent = data.title;
@@ -276,7 +221,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 gsap.to(tooltipBox, {
                     opacity: 1,
                     y: 0,
-                    duration: 0.35,
+                    duration: 0.25,
                     ease: "power2.out"
                 });
             }
@@ -286,14 +231,6 @@ document.addEventListener("DOMContentLoaded", function() {
     // Connect location card trigger bounds
     locCards.forEach(card => {
         card.addEventListener("click", function() {
-            const locKey = this.getAttribute("data-location");
-            activateLocation(locKey);
-        });
-    });
-
-    // Connect hotspot pin triggers
-    mapPins.forEach(pin => {
-        pin.addEventListener("click", function() {
             const locKey = this.getAttribute("data-location");
             activateLocation(locKey);
         });
