@@ -22,10 +22,10 @@
             <!-- Col 1: Branding & Profile -->
             <div class="footer-col branding-col">
                 <div class="footer-brand-wrap">
-                    <img src="assets/gurgarestates-logo.png?v=<?= time() ?>" alt="Guru Ghar Estate" class="footer-logo" onerror="this.onerror=null; this.src='assets/rr-home-logo.png';">
+                    <img src="assets/gurgarestates-logo.png?v=<?= time() ?>" alt="Guru Ghar Estate" class="footer-logo" onerror="this.onerror=null; this.src='assets/gurgarestates-logo.png';">
                 </div>
                 <p class="tagline">Building Dreams, Delivering Luxury</p>
-                <p class="desc">Experience the absolute pinnacle of sophisticated living tailored to your expectations. Guru Ghar Estate (RR Homes) delivers premium, bespoke residential builder floors across Faridabad and the Delhi NCR region.</p>
+                <p class="desc">Experience the absolute pinnacle of sophisticated living tailored to your expectations. Guru Ghar Estate delivers premium, bespoke residential builder floors across Faridabad and the Delhi NCR region.</p>
 
                 <!-- High-End Tactile Social Widgets -->
                 <div class="social-icons-wrapper">

@@ -439,7 +439,7 @@ $active_page = $active_pageInfo['active_page'] ?? null;
 
         <nav class="main-header navbar navbar-expand navbar-white navbar-light d-flex justify-content-center align-items-center" style="min-height: 60px;">
             <div class="blinking-wrapper" title="Interactive Dashboard Welcome">
-                Welcome to RRHomes Admin Dashboard
+                Welcome to Guru Ghar Estate Admin Dashboard
             </div>
         </nav>
 
@@ -464,7 +464,7 @@ $active_page = $active_pageInfo['active_page'] ?? null;
 
         <aside class="main-sidebar sidebar-light-primary elevation-4">
             <a href="<?= $base_url ?>index.php" class="brand-link" style="background-color: #ffffff !important; border-bottom: 1px solid #f0f0f1 !important;">
-                <img src="<?= $asset_url ?>rr-home-logo.png" alt="Logo" class="brand-image">
+                <img src="<?= $asset_url ?>gurgarestates-logo.png" alt="Logo" class="brand-image">
             </a>
             <div class="sidebar">
                 <div class="user-panel mt-3 pb-3 mb-3">

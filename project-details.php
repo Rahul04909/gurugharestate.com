@@ -32,7 +32,7 @@ $seo_featured = htmlspecialchars($project['seo_featured_image']);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= htmlspecialchars($project['seo_meta_title'] ?: $project['title']) ?> | RR Homes</title>
+    <title><?= htmlspecialchars($project['seo_meta_title'] ?: $project['title']) ?> | Guru Ghar Estate</title>
     <meta name="description" content="<?= htmlspecialchars($project['seo_meta_description'] ?: $short_description) ?>">
     <meta name="keywords" content="<?= htmlspecialchars($project['seo_meta_keywords']) ?>">
     <?php if($project['seo_schema']): ?>

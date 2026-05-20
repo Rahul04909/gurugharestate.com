@@ -71,10 +71,22 @@
         <!-- Right Side: Interactive Map & Floating Visual Pins -->
         <div class="p-map-visual">
             <div class="map-wrapper">
-                <img src="assets/map.svg?v=<?= time() ?>" alt="Guru Ghar Estate Presence Map" class="main-map-img">
+                <img src="assets/delhi-ncr-map.jpg?v=<?= time() ?>" alt="Guru Ghar Estate Presence Map" class="main-map-img">
                 
-                <!-- Pulsing Golden Hotspot Pin representing collective Delhi NCR presence -->
-                <div class="map-pin pin-delhi active" data-location="delhi" title="Delhi NCR Presence">
+                <!-- Pulsing Golden Hotspot Pins mapped to Delhi NCR coordinates -->
+                <div class="map-pin pin-faridabad active" data-location="faridabad" title="Faridabad Headquarters (HQ)">
+                    <div class="pin-pulse"></div>
+                    <div class="pin-inner"></div>
+                </div>
+                <div class="map-pin pin-gurugram" data-location="gurugram" title="Gurugram Presence">
+                    <div class="pin-pulse"></div>
+                    <div class="pin-inner"></div>
+                </div>
+                <div class="map-pin pin-delhi" data-location="delhi" title="South Delhi Presence">
+                    <div class="pin-pulse"></div>
+                    <div class="pin-inner"></div>
+                </div>
+                <div class="map-pin pin-noida" data-location="noida" title="Noida Presence">
                     <div class="pin-pulse"></div>
                     <div class="pin-inner"></div>
                 </div>
@@ -243,7 +255,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Set matching components as active
         const targetCard = document.querySelector(`.loc-card[data-location="${locKey}"]`);
-        const targetPin = document.querySelector(`.map-pin.pin-delhi`);
+        const targetPin = document.querySelector(`.map-pin[data-location="${locKey}"]`);
         
         if (targetCard) targetCard.classList.add("active");
         if (targetPin) targetPin.classList.add("active");
@@ -252,7 +264,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (targetPin) {
             gsap.fromTo(targetPin, 
                 { scale: 1 }, 
-                { scale: 1.3, duration: 0.25, yoyo: true, repeat: 1, ease: "power1.out" }
+                { scale: 1.35, duration: 0.25, yoyo: true, repeat: 1, ease: "power1.out" }
             );
         }
 

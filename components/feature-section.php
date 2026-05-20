@@ -26,7 +26,7 @@
             <h2>Meet the Visionary Behind <br><span class="gold-text">Guru Ghar Estate</span></h2>
             <div class="founder-title-underline"></div>
             
-            <p class="founder-intro">With over two decades of uncompromising building mastery and absolute dedication to client trust, <strong>Rakesh Batra</strong> has shaped the landscape of premium housing and builder floors in Faridabad, Delhi NCR. Under his leadership, Guru Ghar Estate (RR Homes) has become synonymous with elite engineering, transparent relationships, and premium architectural luxury.</p>
+            <p class="founder-intro">With over two decades of uncompromising building mastery and absolute dedication to client trust, <strong>Rakesh Batra</strong> has shaped the landscape of premium housing and builder floors in Faridabad, Delhi NCR. Under his leadership, Guru Ghar Estate has become synonymous with elite engineering, transparent relationships, and premium architectural luxury.</p>
             
             <!-- Value Pillars -->
             <ul class="founder-pillars">
@@ -55,7 +55,7 @@
 
             <!-- Custom Personal Quote Card -->
             <div class="founder-quote-box">
-                <p class="quote-text">"At Guru Ghar Estate (RR Homes), we do not simply build upscale residential floors; we craft luxury spaces where families construct lifetimes of memories. Quality is our signature, and your trust is our core foundation."</p>
+                <p class="quote-text">"At Guru Ghar Estate, we do not simply build upscale residential floors; we craft luxury spaces where families construct lifetimes of memories. Quality is our signature, and your trust is our core foundation."</p>
                 <div class="quote-author-wrapper">
                     <span class="quote-author-line"></span>
                     <span class="quote-author-name">Rakesh Batra</span>

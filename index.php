@@ -1,5 +1,5 @@
 <?php
-// Main Index File for RR Homes
+// Main Index File for Guru Ghar Estate
 ?>
 <!DOCTYPE html>
 <html lang="en">

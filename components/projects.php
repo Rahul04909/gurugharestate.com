@@ -32,7 +32,7 @@ $projects = $stmt->get_result();
                             <?php else: ?>
                                 <img src="assets/front-about.png" alt="Guru Ghar Estate Premium Residence" class="placeholder-img">
                                 <div class="placeholder-overlay">
-                                    <img src="assets/rr-home-logo.png" alt="RR Homes Logo" class="overlay-logo">
+                                    <img src="assets/gurgarestates-logo.png" alt="Guru Ghar Estate Logo" class="overlay-logo">
                                 </div>
                             <?php endif; ?>
                         </div>

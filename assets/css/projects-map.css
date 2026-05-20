@@ -1,10 +1,9 @@
 /* ==========================================================================
-   Guru Ghar Estate (RR Homes) - Premium Interactive GSAP Projects Map Styling
+   Guru Ghar Estate - Premium Interactive GSAP Projects Map Styling
    ========================================================================== */
 
-/* Theme Variables perfectly synced with Header theme tokens */
 :root {
-    --map-bg-slate: #403f46;          /* The core requested background slate */
+    --map-bg-slate: #403f46;          /* The core background slate */
     --map-bg-deep: #2a292e;           /* Deep dark background shade for layout contrast */
     --map-bg-card: rgba(64, 63, 70, 0.45); /* Glassmorphic card fill */
     --map-bg-card-active: rgba(82, 81, 89, 0.65);
@@ -32,7 +31,7 @@
     z-index: 1;
 }
 
-/* Stunning Ambient Radial Background Glow overlays for premium depth */
+/* Ambient Radial Background Glow overlays for premium depth */
 .map-bg-glow {
     position: absolute;
     width: 600px;
@@ -264,38 +263,40 @@
 .map-wrapper {
     position: relative;
     width: 100%;
-    max-width: 650px;
+    max-width: 480px;                 /* Sized compactly to fit elegantly beside text column */
     border-radius: 16px;
-    border: 1.5px solid rgba(212, 175, 55, 0.28);
-    background: rgba(26, 25, 30, 0.75); /* Richer obsidian panel shade for high gold contrast */
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4), inset 0 0 40px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    background: #ffffff;              /* Clean white background to blend perfectly with JPG */
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    aspect-ratio: 563 / 626; /* Perfect crop box matched to SVG dimensions */
+    aspect-ratio: 1 / 1;              /* Perfect square constraints matching new image bounds */
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
+    transition: var(--map-transition);
 }
 
-/* High-performance Vector Gold-Tinged styling filter */
+.map-wrapper:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+    border-color: rgba(212, 175, 55, 0.4);
+}
+
+/* High-performance Map visual render */
 .main-map-img {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Prevent cropping of state boundaries */
-    /* Richer gold visual filter matrix with high contrast and deep outline drop-shadows */
-    filter: invert(72%) sepia(21%) saturate(1400%) hue-rotate(345deg) brightness(0.95) contrast(0.95) drop-shadow(0 15px 30px rgba(0, 0, 0, 0.5));
-    opacity: 0.85; /* Highly visible outline map of India! */
+    object-fit: cover;               /* Crop perfectly into square bounds */
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.15)) contrast(1.02);
+    opacity: 0.95;
     transition: var(--map-transition);
     transform: none;
-}
-
-.projects-map-section:hover .main-map-img {
-    opacity: 0.95;
 }
 
 /* Dynamic Glowing Pulsing Vector Pins styling */
 .map-pin {
     position: absolute;
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
     cursor: pointer;
     z-index: 10;
     transform: translate(-50%, -50%);
@@ -306,9 +307,9 @@
     width: 100%;
     height: 100%;
     background: #ffffff;
-    border: 3.5px solid var(--map-gold);
+    border: 4px solid var(--map-gold);
     border-radius: 50%;
-    box-shadow: 0 0 15px rgba(0,0,0,0.5), var(--map-shadow-gold);
+    box-shadow: 0 0 15px rgba(0,0,0,0.4), var(--map-shadow-gold);
     position: relative;
     z-index: 2;
     transition: var(--map-transition);
@@ -333,7 +334,7 @@
     100% { transform: translate(-50%, -50%) scale(4.5); opacity: 0; }
 }
 
-/* Pin active states */
+/* Pin active and hover states */
 .map-pin:hover .pin-inner,
 .map-pin.active .pin-inner {
     background: var(--map-gold);
@@ -347,10 +348,25 @@
     background: #ffffff;
 }
 
-/* Coordinates corresponding beautifully to Delhi NCR in the complete India map */
+/* Specific Coordinates corresponding perfectly to Delhi NCR regional boundaries */
+.pin-faridabad {
+    top: 56.5%;
+    left: 58.5%;
+}
+
+.pin-gurugram {
+    top: 54%;
+    left: 47%;
+}
+
 .pin-delhi {
-    top: 28.25%;
-    left: 39.5%;
+    top: 45.5%;
+    left: 53.5%;
+}
+
+.pin-noida {
+    top: 48.5%;
+    left: 63.5%;
 }
 
 /* ==========================================================================
@@ -363,7 +379,7 @@
     transform: translateX(-50%);
     width: 90%;
     max-width: 440px;
-    background: rgba(30, 29, 34, 0.8);
+    background: rgba(30, 29, 34, 0.82);
     border: 1.5px solid rgba(212, 175, 55, 0.25);
     border-radius: 12px;
     padding: 24px;
@@ -491,7 +507,7 @@
     .p-map-visual {
         width: 100%;
         margin-top: 20px;
-        padding-bottom: 240px; /* Make spacious room for floating tooltip box */
+        padding-bottom: 240px; /* Space room for tooltip overlay */
     }
     
     .map-tooltip-box {

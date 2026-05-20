@@ -33,7 +33,7 @@
                 <h2>Constant Discussion & <br><span class="gold-text">Continuous Improvement</span></h2>
                 <div class="spec-title-underline"></div>
                 
-                <p class="spec-intro">At <strong>Guru Ghar Estate (RR Homes)</strong>, structural superiority is never an accident—it is the direct result of rigorous, daily on-site collaboration. By engaging in constant team discussions, evaluating micro-details, and driving a culture of continuous improvement, our architects, builders, and structural engineers ensure every brick laid exceeds global benchmarks.</p>
+                <p class="spec-intro">At <strong>Guru Ghar Estate</strong>, structural superiority is never an accident—it is the direct result of rigorous, daily on-site collaboration. By engaging in constant team discussions, evaluating micro-details, and driving a culture of continuous improvement, our architects, builders, and structural engineers ensure every brick laid exceeds global benchmarks.</p>
                 
                 <!-- Core Collaborative Pillars -->
                 <ul class="spec-pillars">
