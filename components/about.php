@@ -13,7 +13,7 @@
         <!-- Left Side: Single Premium Image Visual -->
         <div class="about-left">
             <div class="about-image-wrapper">
-                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Guru Ghar Estate Premium Builder Floors" class="about-single-img">
+                <img src="assets/front-about.png?v=<?= time() ?>" alt="Guru Ghar Estate Premium Builder Floors" class="about-single-img">
                 <div class="about-image-card">
                     <span class="card-number">10+</span>
                     <span class="card-text">Years of Excellence</span>
