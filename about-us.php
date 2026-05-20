@@ -44,18 +44,18 @@
 
     <section class="page-hero">
         <div class="page-hero-content">
-            <h1>About <span>RR Homes</span></h1>
+            <h1>About <span>Guru Ghar Estate</span></h1>
             <p style="font-size: 1.25rem; max-width: 700px; margin: auto; opacity: 0.9; text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">Pushing horizons of possibilities by turning your dream house into a reality with our passionate and dedicated team.</p>
         </div>
     </section>
-
+ 
     <section class="about-section">
         <div class="about-container">
             <div class="about-content">
                 <h2 class="section-title">Who We Are</h2>
-                <p><strong>RR Homes</strong> is one of the fastest-growing construction companies in Delhi NCR. It is stitched by some brilliant minds with clear business values. With more than 10 years of diverse Experience, RR Homes is delivering high-quality projects that ensure top-quality construction, European style elevation, and timely delivery.</p>
-                <p>RR homes offer a wide range of builder floors in Faridabad at a very reasonable cost. RR Homes works to develop residential units that are spacious, appealing, and rich in aesthetics. We ensure to provide age-proof homes through the best construction material, latest construction techniques, and a dedicated after-sales team.</p>
-                <p>Experience of our Founders <strong>Sandeep Goel</strong> and <strong>Pravesh Goel</strong> has made the quality of construction world-class with proper strategic implementation. We are pushing horizons of possibilities by turning your dream house into a reality with our passionate and dedicated team.</p>
+                <p><strong>Guru Ghar Estate (RR Homes)</strong> is one of the fastest-growing construction and real estate consultancy companies in Delhi NCR. It is stitched by some brilliant minds with clear business values. With more than 10 years of diverse Experience, Guru Ghar Estate is delivering high-quality residential projects that ensure premium construction, European style elevation designs, and timely delivery.</p>
+                <p>Guru Ghar Estate offers a wide range of premium builder floors in Faridabad at highly reasonable prices. We work to develop residential units that are exceptionally spacious, visually appealing, and rich in premium aesthetics. We ensure to provide age-proof homes through top-grade construction materials, the latest engineering techniques, and a dedicated after-sales team.</p>
+                <p>The vast industry experience of our founders <strong>Sandeep Goel</strong> and <strong>Pravesh Goel</strong> has made the quality of our construction truly world-class. We are consistently pushing the horizons of possibilities by turning your dream house into a reality with our passionate team.</p>
             </div>
             <div class="about-image">
                 <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="RR Homes Exterior Building">

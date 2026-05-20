@@ -2,32 +2,33 @@
 <link rel="stylesheet" href="assets/css/about.css">
 
 <section class="about-section">
+    <!-- Centered Header above visual columns -->
+    <div class="about-section-header">
+        <h2 class="about-title-italic">About <span>Guru Ghar Estate</span></h2>
+        <div class="about-title-underline"></div>
+    </div>
+
     <div class="about-container">
         
-        <!-- Left Side: Visual Composition -->
+        <!-- Left Side: Single Premium Image Visual -->
         <div class="about-left">
-            <!-- Faded Background is handled by CSS ::before -->
-            
-            <div class="about-badge">
-                <h3>ABOUT US</h3>
-            </div>
-            
-            <div class="about-circles">
-                <!-- Using placeholder images to represent the architectural shots -->
-                <!-- We can easily swap these to assets/1.png, assets/2.png later -->
-                <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Landscape Architecture" class="circle-img circle-1">
-                
-                <img src="assets/2.png" alt="RR Homes Front View" class="circle-img circle-2">
-                
-                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Apartment Exterior" class="circle-img circle-3">
+            <div class="about-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Guru Ghar Estate Premium Builder Floors" class="about-single-img">
+                <div class="about-image-card">
+                    <span class="card-number">10+</span>
+                    <span class="card-text">Years of Excellence</span>
+                </div>
             </div>
         </div>
 
-        <!-- Right Side: Text Content -->
+        <!-- Right Side: Optimized Text Content -->
         <div class="about-right">
-            <h2>About <span>RR HOMES</span></h2>
-            <p>RR homes offer a wide range of builder floors in Faridabad at a very reasonable cost. RR Homes works to develop residential units that are spacious, appealing, and rich in aesthetics. We ensure to provide age-proof homes through the best construction material, latest construction techniques, and a dedicated after-sales team.</p>
-            <a href="#" class="about-btn">READ MORE</a>
+            <p class="about-lead">A Legacy of Trust, Transparency & Architectural Brilliance in Faridabad.</p>
+            <p><strong>Guru Ghar Estate (RR Homes)</strong> is a premier real estate construction and consultancy company dedicated to delivering high-quality residential spaces and premium builder floors in Faridabad, Delhi NCR. Under the visionary leadership of our founders, we have pioneered the standard of luxury living by combining world-class materials, European-inspired elevation designs, and timely project delivery.</p>
+            <p>Our focus is to build spacious, aesthetically rich, and age-proof homes that guarantee long-term value for our clients. Through transparent communication, dedicated after-sales support, and a customer-first approach, we make the journey of owning your dream home absolute peace of mind.</p>
+            <div class="about-cta-wrapper">
+                <a href="about-us.php" class="about-btn">Explore Our Journey</a>
+            </div>
         </div>
 
     </div>
