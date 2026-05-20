@@ -17,39 +17,35 @@
             
             <p class="p-map-description">We build luxury architectural masterworks in India's most highly-sought residential neighborhoods. Explore our active premier hubs across Delhi NCR, meticulously designed for multi-generational elegance.</p>
             
-            <!-- Dynamic Interactive Location Cards Grid -->
+            <!-- Dynamic Interactive Location Cards Grid (Clean Premium 2x2 Layout) -->
             <div class="map-location-selector">
                 <div class="loc-card active" data-location="faridabad">
-                    <div class="loc-card-header">
-                        <span class="loc-dot"></span>
+                    <span class="loc-dot"></span>
+                    <div class="loc-card-info">
                         <h4>Faridabad (HQ)</h4>
                         <span class="loc-count">15+ Floors</span>
                     </div>
-                    <p>Handcrafted premium builder floors in elite sectors 14, 15, 21, and 85.</p>
                 </div>
                 <div class="loc-card" data-location="gurugram">
-                    <div class="loc-card-header">
-                        <span class="loc-dot"></span>
+                    <span class="loc-dot"></span>
+                    <div class="loc-card-info">
                         <h4>Gurugram</h4>
                         <span class="loc-count">8+ Projects</span>
                     </div>
-                    <p>High-end modern residential floors along Golf Course Extension Road.</p>
                 </div>
                 <div class="loc-card" data-location="delhi">
-                    <div class="loc-card-header">
-                        <span class="loc-dot"></span>
+                    <span class="loc-dot"></span>
+                    <div class="loc-card-info">
                         <h4>South Delhi</h4>
-                        <span class="loc-count">5+ Residences</span>
+                        <span class="loc-count">5+ Floors</span>
                     </div>
-                    <p>Ultra-luxury architectural collaborations in Vasant Vihar and GK-II.</p>
                 </div>
                 <div class="loc-card" data-location="noida">
-                    <div class="loc-card-header">
-                        <span class="loc-dot"></span>
+                    <span class="loc-dot"></span>
+                    <div class="loc-card-info">
                         <h4>Noida NCR</h4>
                         <span class="loc-count">Upcoming</span>
                     </div>
-                    <p>Modern luxury spaces situated in active, hyper-connected residential hubs.</p>
                 </div>
             </div>
 
@@ -156,12 +152,12 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     };
 
-    // 1. Entry scroll transitions using GSAP
-    gsap.from(".p-map-content .p-map-badge, .p-map-content h2, .p-map-content .p-map-title-underline, .p-map-content .p-map-description", {
+    // 1. Entry scroll transitions using GSAP (Robust Section ScrollTrigger)
+    gsap.from(".p-map-content .p-map-badge, .p-map-content h2, .p-map-content .p-map-title-underline, .p-map-content .p-map-description, .map-location-selector .loc-card, .p-map-stats .stat-card, .p-map-content .map-cta-btn", {
         opacity: 0,
-        y: 40,
-        duration: 1,
-        stagger: 0.15,
+        y: 30,
+        duration: 0.8,
+        stagger: 0.1,
         ease: "power2.out",
         scrollTrigger: {
             trigger: ".projects-map-section",
@@ -170,27 +166,14 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // Staggered interactive location cards appearance
-    gsap.from(".map-location-selector .loc-card", {
+    // Map visual boundaries reveal
+    gsap.from(".p-map-visual .map-wrapper", {
         opacity: 0,
-        x: -45,
-        duration: 0.8,
-        stagger: 0.12,
+        scale: 0.95,
+        duration: 1,
         ease: "power2.out",
         scrollTrigger: {
-            trigger: ".map-location-selector",
-            start: "top 80%"
-        }
-    });
-
-    // Map visual boundaries reveal
-    gsap.from(".p-map-visual .main-map-img", {
-        opacity: 0,
-        scale: 0.93,
-        duration: 1.4,
-        ease: "power3.out",
-        scrollTrigger: {
-            trigger: ".p-map-visual",
+            trigger: ".projects-map-section",
             start: "top 75%"
         }
     });
@@ -198,13 +181,13 @@ document.addEventListener("DOMContentLoaded", function() {
     // Elastic dropping pins
     gsap.from(".p-map-visual .map-pin", {
         opacity: 0,
-        y: -80,
+        y: -40,
         scale: 0,
-        duration: 1.4,
-        ease: "elastic.out(1, 0.45)",
-        stagger: 0.15,
+        duration: 1.2,
+        ease: "elastic.out(1, 0.5)",
+        stagger: 0.1,
         scrollTrigger: {
-            trigger: ".p-map-visual",
+            trigger: ".projects-map-section",
             start: "top 70%"
         }
     });
@@ -212,12 +195,12 @@ document.addEventListener("DOMContentLoaded", function() {
     // Floating dynamic tooltip box entrance
     gsap.from(".map-tooltip-box", {
         opacity: 0,
-        y: 40,
-        scale: 0.95,
-        duration: 1.2,
+        y: 25,
+        scale: 0.98,
+        duration: 1,
         ease: "power2.out",
         scrollTrigger: {
-            trigger: ".p-map-visual",
+            trigger: ".projects-map-section",
             start: "top 65%"
         }
     });
@@ -229,12 +212,12 @@ document.addEventListener("DOMContentLoaded", function() {
             textContent: 0
         }, {
             textContent: target,
-            duration: 2,
+            duration: 1.8,
             ease: "power2.out",
             snap: { textContent: 1 },
             scrollTrigger: {
-                trigger: ".p-map-stats",
-                start: "top 85%",
+                trigger: ".projects-map-section",
+                start: "top 75%",
                 toggleActions: "play none none none"
             }
         });

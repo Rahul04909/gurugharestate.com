@@ -65,7 +65,7 @@
    ========================================================================== */
 .p-map-content {
     flex: 1.1;
-    max-width: 600px;
+    max-width: 580px;
     position: relative;
     z-index: 2;
 }
@@ -74,24 +74,24 @@
     display: inline-block;
     background: rgba(212, 175, 55, 0.12);
     color: var(--map-gold);
-    padding: 8px 18px;
+    padding: 6px 14px;
     border-radius: 30px;
-    font-size: 12.5px;
+    font-size: 11px;
     font-weight: 600;
-    letter-spacing: 1.8px;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
-    margin-bottom: 22px;
+    margin-bottom: 14px;
     border: 1px solid rgba(212, 175, 55, 0.25);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .p-map-content h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 46px;
+    font-size: 36px;
     font-weight: 700;
     color: var(--text-white);
-    line-height: 1.25;
-    margin-bottom: 12px;
+    line-height: 1.2;
+    margin-bottom: 8px;
 }
 
 .gold-text {
@@ -100,34 +100,38 @@
 }
 
 .p-map-title-underline {
-    width: 80px;
+    width: 60px;
     height: 3px;
     background-color: var(--map-gold);
-    margin-bottom: 28px;
+    margin-bottom: 18px;
     border-radius: 2px;
     box-shadow: var(--map-shadow-gold);
 }
 
 .p-map-description {
     color: var(--text-silver);
-    font-size: 15.5px;
-    line-height: 1.8;
-    margin-bottom: 35px;
+    font-size: 14.5px;
+    line-height: 1.7;
+    margin-bottom: 22px;
 }
 
 /* Location Selector Grid Layout styling */
+/* Location Selector Grid Layout styling */
 .map-location-selector {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 25px;
 }
 
 .loc-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
     background: var(--map-bg-card);
     border: 1px solid var(--map-border-glass);
     border-radius: 8px;
-    padding: 16px 20px;
+    padding: 12px 16px;
     cursor: pointer;
     transition: var(--map-transition);
     backdrop-filter: blur(10px);
@@ -147,18 +151,12 @@
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25), 0 0 15px rgba(212, 175, 55, 0.15);
 }
 
-.loc-card-header {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 6px;
-}
-
 .loc-dot {
     width: 8px;
     height: 8px;
     background: var(--text-silver);
     border-radius: 50%;
+    flex-shrink: 0;
     transition: var(--map-transition);
 }
 
@@ -173,25 +171,33 @@
     transform: scale(1.3);
 }
 
-.loc-card-header h4 {
-    font-size: 15.5px;
-    font-weight: 600;
-    color: var(--text-white);
-    margin: 0;
+.loc-card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
     flex-grow: 1;
 }
 
+.loc-card-info h4 {
+    font-size: 14.5px;
+    font-weight: 600;
+    color: var(--text-white);
+    margin: 0;
+    line-height: 1.2;
+}
+
 .loc-count {
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 600;
     background: rgba(255, 255, 255, 0.08);
     color: var(--text-silver);
-    padding: 3px 10px;
+    padding: 2px 8px;
     border-radius: 30px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     border: 1px solid rgba(255, 255, 255, 0.05);
     transition: var(--map-transition);
+    align-self: flex-start;
 }
 
 .loc-card.active .loc-count {
@@ -200,34 +206,26 @@
     border-color: rgba(212, 175, 55, 0.3);
 }
 
-.loc-card p {
-    font-size: 13.5px;
-    color: var(--text-silver);
-    margin: 0;
-    line-height: 1.6;
-    opacity: 0.85;
-}
-
 /* Premium Stats Columns styling */
 .p-map-stats {
     display: flex;
-    gap: 40px;
-    margin-bottom: 45px;
-    padding-top: 25px;
+    gap: 30px;
+    margin-bottom: 25px;
+    padding-top: 18px;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .stat-card h3 {
     font-family: 'Playfair Display', serif;
-    font-size: 42px;
+    font-size: 32px;
     font-weight: 700;
     color: var(--map-gold);
-    margin: 0 0 6px 0;
+    margin: 0 0 4px 0;
     text-shadow: var(--map-shadow-gold);
 }
 
 .stat-card p {
-    font-size: 13px;
+    font-size: 11px;
     color: var(--text-silver);
     margin: 0;
     text-transform: uppercase;
@@ -236,13 +234,13 @@
 }
 
 .map-cta-btn {
-    padding: 15px 36px;
-    font-size: 13.5px;
-    letter-spacing: 1px;
+    padding: 10px 24px;
+    font-size: 13px;
+    letter-spacing: 0.8px;
     border-radius: 4px;
     display: inline-flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
     text-decoration: none;
     font-weight: 600;
     transition: var(--map-transition);
@@ -257,14 +255,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 24px;
+    gap: 16px;
     z-index: 2;
 }
 
 .map-wrapper {
     position: relative;
     width: 100%;
-    max-width: 420px;                 /* Compact premium square constraint matching about section */
+    max-width: 300px;                 /* Sized perfectly to match the exact vertical height of the About image (460px total with tooltip) */
     border-radius: 16px;
     border: 2px solid rgba(255, 255, 255, 0.25);
     background: #ffffff;              /* Clean white background to blend perfectly with JPG */
@@ -376,11 +374,11 @@
 .map-tooltip-box {
     position: relative;
     width: 100%;
-    max-width: 420px;
+    max-width: 300px;
     background: rgba(30, 29, 34, 0.82);
     border: 1.5px solid rgba(212, 175, 55, 0.25);
     border-radius: 12px;
-    padding: 20px 24px;
+    padding: 16px 20px;
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), 0 0 20px rgba(212, 175, 55, 0.08);
@@ -392,13 +390,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-    padding-bottom: 10px;
+    padding-bottom: 8px;
 }
 
 .tooltip-header h4 {
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 700;
     color: var(--text-white);
     margin: 0;
@@ -406,45 +404,45 @@
 }
 
 .tooltip-badge {
-    font-size: 10px;
+    font-size: 9px;
     font-weight: 700;
     background: rgba(212, 175, 55, 0.15);
     color: var(--map-gold);
-    padding: 4px 10px;
+    padding: 3px 8px;
     border-radius: 30px;
     letter-spacing: 0.8px;
     text-transform: uppercase;
 }
 
 .map-tooltip-box p {
-    font-size: 13.5px;
+    font-size: 12.5px;
     color: var(--text-silver);
-    line-height: 1.6;
-    margin: 0 0 16px 0;
+    line-height: 1.5;
+    margin: 0 0 12px 0;
     opacity: 0.9;
 }
 
 .tooltip-footer {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
+    gap: 15px;
 }
 
 .tooltip-stat {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 2px;
 }
 
 .t-label {
-    font-size: 11px;
+    font-size: 10px;
     color: var(--text-muted);
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
 .t-val {
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 600;
     color: var(--text-white);
 }
@@ -465,7 +463,7 @@
         gap: 40px;
     }
     .p-map-content h2 {
-        font-size: 40px;
+        font-size: 32px;
     }
 }
 
@@ -477,7 +475,7 @@
     .projects-map-container {
         flex-direction: column;
         text-align: center;
-        gap: 60px;
+        gap: 40px;
     }
     
     .p-map-content {
@@ -488,7 +486,7 @@
     }
     
     .p-map-title-underline {
-        margin: 0 auto 28px auto;
+        margin: 0 auto 18px auto;
     }
     
     .map-location-selector {
@@ -510,7 +508,7 @@
     
     .map-tooltip-box {
         width: 100%;
-        max-width: 420px;
+        max-width: 300px;
     }
 }
 
@@ -520,40 +518,40 @@
     }
     
     .p-map-content h2 {
-        font-size: 34px;
+        font-size: 30px;
     }
     
     .p-map-description {
-        font-size: 14.5px;
+        font-size: 14px;
         text-align: justify;
     }
     
-    .loc-card-header h4 {
-        font-size: 14px;
+    .map-location-selector {
+        grid-template-columns: 1fr;
+        gap: 10px;
     }
     
-    .loc-card p {
-        font-size: 12.5px;
-        text-align: left;
+    .loc-card-info h4 {
+        font-size: 13.5px;
     }
     
     .p-map-stats {
-        gap: 30px;
+        gap: 25px;
     }
     
     .stat-card h3 {
-        font-size: 36px;
+        font-size: 28px;
     }
     
     .map-tooltip-box {
-        padding: 18px;
+        padding: 14px 18px;
     }
     
     .map-tooltip-box p {
-        font-size: 12.5px;
+        font-size: 12px;
     }
     
     .t-val {
-        font-size: 12px;
+        font-size: 11px;
     }
 }
