@@ -73,23 +73,8 @@
             <div class="map-wrapper">
                 <img src="assets/map.svg?v=<?= time() ?>" alt="Guru Ghar Estate Presence Map" class="main-map-img">
                 
-                <!-- Pulsing Golden Hotspot Pins -->
-                <div class="map-pin pin-faridabad active" data-location="faridabad" title="Faridabad HQ">
-                    <div class="pin-pulse"></div>
-                    <div class="pin-inner"></div>
-                </div>
-                
-                <div class="map-pin pin-gurugram" data-location="gurugram" title="Gurugram Hub">
-                    <div class="pin-pulse"></div>
-                    <div class="pin-inner"></div>
-                </div>
-                
-                <div class="map-pin pin-delhi" data-location="delhi" title="South Delhi Hub">
-                    <div class="pin-pulse"></div>
-                    <div class="pin-inner"></div>
-                </div>
-                
-                <div class="map-pin pin-noida" data-location="noida" title="Noida Expansion">
+                <!-- Pulsing Golden Hotspot Pin representing collective Delhi NCR presence -->
+                <div class="map-pin pin-delhi active" data-location="delhi" title="Delhi NCR Presence">
                     <div class="pin-pulse"></div>
                     <div class="pin-inner"></div>
                 </div>
@@ -258,7 +243,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Set matching components as active
         const targetCard = document.querySelector(`.loc-card[data-location="${locKey}"]`);
-        const targetPin = document.querySelector(`.map-pin[data-location="${locKey}"]`);
+        const targetPin = document.querySelector(`.map-pin.pin-delhi`);
         
         if (targetCard) targetCard.classList.add("active");
         if (targetPin) targetPin.classList.add("active");
