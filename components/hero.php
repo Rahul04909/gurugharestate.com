@@ -20,9 +20,9 @@
         </div>
 
         <!-- Slide 3 -->
-        <!-- <div class="swiper-slide">
-          <img src="assets/hero/rrhomes-3.jpeg" alt="RR Homes Banner">
-        </div> -->
+        <div class="swiper-slide">
+          <img src="assets/hero/hero-banner-3.png" alt="RR Homes Banner">
+        </div>
 
       </div>
 
