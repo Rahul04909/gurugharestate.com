@@ -1,0 +1,811 @@
+/* ==========================================================================
+   RR Homes / Guru Ghar Estate - Premium Luxury Interactive Header Style
+   ========================================================================== */
+
+/* Design Tokens & Theme Variables */
+:root {
+    --bg-dark-slate: #403f46;          /* The core requested background slate */
+    --bg-dark-slate-deep: #302f35;     /* Darker shade for Top Bar depth */
+    --bg-dark-slate-light: #525159;    /* Lighter slate for borders/hovers */
+    --primary-gold: #d4af37;           /* Luxury gold accent */
+    --primary-gold-hover: #bda031;     /* Darker gold for active states */
+    
+    --text-white: #ffffff;
+    --text-silver: #d1d1d6;            /* Premium muted silver */
+    --text-muted: #9a9a9e;
+    
+    --font-primary: 'Outfit', 'Poppins', sans-serif;
+    --font-heading: 'Playfair Display', serif;
+    
+    --transition-premium: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    --shadow-premium: 0 8px 30px rgba(0, 0, 0, 0.15);
+    --shadow-gold-glow: 0 0 15px rgba(212, 175, 55, 0.25);
+}
+
+/* Base resets specifically targeted to avoid global overrides while being strict */
+.top-bar, .header, .mobile-nav, .header-modal {
+    box-sizing: border-box;
+    font-family: var(--font-primary);
+}
+
+.top-bar *, .header *, .mobile-nav *, .header-modal * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ==========================================================================
+   TOP BAR (Premium & Sleek)
+   ========================================================================== */
+.top-bar {
+    background: var(--bg-dark-slate-deep);
+    color: var(--text-silver);
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    z-index: 1001;
+    max-height: 80px;
+    opacity: 1;
+    overflow: hidden;
+    transition: var(--transition-premium);
+}
+
+.top-bar-container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-bar-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.top-bar-tag {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.top-bar-tag i {
+    color: var(--primary-gold);
+    font-size: 12px;
+}
+
+.top-bar .divider {
+    color: var(--bg-dark-slate-light);
+    opacity: 0.5;
+}
+
+.top-bar-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.top-bar a {
+    color: var(--text-silver);
+    text-decoration: none;
+    transition: var(--transition-premium);
+}
+
+.top-bar a:hover {
+    color: var(--primary-gold);
+}
+
+/* Fixed Wrapper enclosing Top Bar & Main Header */
+.header-fixed-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: var(--transition-premium);
+}
+
+/* Smooth top bar collapse on scroll */
+.header-fixed-wrapper.scrolled .top-bar {
+    max-height: 0;
+    opacity: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-bottom-color: transparent;
+    pointer-events: none;
+}
+
+/* ==========================================================================
+   MAIN HEADER (Elegant Dark Slate & Gold Theme)
+   ========================================================================== */
+.header {
+    position: relative;
+    width: 100%;
+    background: var(--bg-dark-slate);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    transition: var(--transition-premium);
+}
+
+.header-fixed-wrapper.scrolled .header {
+    background: rgba(64, 63, 70, 0.95);
+    border-bottom-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.header-container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 40px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: var(--transition-premium);
+    position: relative;
+}
+
+.header.scrolled .header-container {
+    height: 75px;
+}
+
+/* STATIC LOGO - Left Aligned, No Shifting */
+.logo-container {
+    flex-shrink: 0;
+    width: 110px;
+    transition: var(--transition-premium);
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 2px 10px rgba(0,0,0,0.1));
+}
+
+.header.scrolled .logo-container {
+    width: 95px;
+}
+
+/* NAVIGATION LINKS - Elegant Hover Effects */
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    margin: 0 40px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: var(--text-silver);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    position: relative;
+    padding: 10px 0;
+    transition: var(--transition-premium);
+    cursor: pointer;
+}
+
+.nav-item:hover,
+.nav-item.active {
+    color: var(--text-white);
+}
+
+/* Modern growing underline interaction from center */
+.nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-gold);
+    transform: translateX(-50%);
+    transition: var(--transition-premium);
+}
+
+.nav-item:hover::after,
+.nav-item.active::after {
+    width: 100%;
+}
+
+/* PROJECTS DROPDOWN - Sophisticated Transitions */
+.nav-dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.dropdown-caret {
+    font-size: 10px;
+    transition: var(--transition-premium);
+}
+
+.nav-dropdown:hover .dropdown-caret {
+    transform: rotate(180deg);
+    color: var(--primary-gold);
+}
+
+.dropdown-content {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(15px) scale(0.96);
+    background-color: var(--bg-dark-slate-deep);
+    min-width: 240px;
+    box-shadow: var(--shadow-premium);
+    z-index: 1000;
+    border-top: 3px solid var(--primary-gold);
+    border-radius: 0 0 8px 8px;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.nav-dropdown:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0) scale(1);
+}
+
+.dropdown-content a {
+    color: var(--text-silver);
+    padding: 14px 20px;
+    text-decoration: none;
+    display: block;
+    font-size: 13.5px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    transition: var(--transition-premium);
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--bg-dark-slate);
+    color: var(--primary-gold);
+    padding-left: 26px;
+}
+
+/* ==========================================================================
+   BUTTONS / CTAs (Elegant Premium Aesthetics)
+   ========================================================================== */
+.header-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-shrink: 0;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 13.5px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: var(--transition-premium);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+/* Luxury Phone outline CTA */
+.btn-outline {
+    border-color: rgba(212, 175, 55, 0.4);
+    color: var(--primary-gold);
+    background: transparent;
+    padding: 12px 20px;
+}
+
+.phone-number-text {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-white);
+    transition: var(--transition-premium);
+}
+
+.btn-outline:hover {
+    background: var(--primary-gold);
+    border-color: var(--primary-gold);
+    color: var(--bg-dark-slate);
+    box-shadow: var(--shadow-gold-glow);
+    transform: translateY(-2px);
+}
+
+.btn-outline:hover .phone-number-text {
+    color: var(--bg-dark-slate);
+}
+
+/* Premium Enquire Now button */
+.btn-primary {
+    background: var(--primary-gold);
+    color: var(--bg-dark-slate-deep);
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.15);
+}
+
+.btn-primary:hover {
+    background: var(--text-white);
+    color: var(--bg-dark-slate-deep);
+    box-shadow: var(--shadow-gold-glow);
+    transform: translateY(-2px);
+}
+
+/* Active buttons click */
+.btn:active {
+    transform: translateY(0);
+}
+
+/* ==========================================================================
+   HAMBURGER TOGGLE (Sleek Micro-animations)
+   ========================================================================== */
+.mobile-toggle {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1005;
+}
+
+.hamburger-lines {
+    height: 20px;
+    width: 26px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hamburger-lines .line {
+    display: block;
+    height: 2.5px;
+    width: 100%;
+    background-color: var(--text-white);
+    border-radius: 4px;
+    transition: var(--transition-premium);
+}
+
+.hamburger-lines:hover .line {
+    background-color: var(--primary-gold);
+}
+
+/* ==========================================================================
+   MOBILE NAVIGATION DRAWER
+   ========================================================================== */
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    width: 85%;
+    max-width: 380px;
+    height: 100vh;
+    background: var(--bg-dark-slate-deep);
+    z-index: 2000;
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: -10px 0 40px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    border-left: 2px solid rgba(212, 175, 55, 0.2);
+}
+
+.mobile-nav.active {
+    transform: translateX(0);
+}
+
+.mobile-nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.mobile-logo {
+    width: 110px;
+}
+
+.mobile-logo img {
+    width: 100%;
+    height: auto;
+}
+
+.mobile-nav-close {
+    font-size: 26px;
+    color: var(--text-white);
+    cursor: pointer;
+    transition: var(--transition-premium);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.mobile-nav-close:hover {
+    color: var(--primary-gold);
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotate(90deg);
+}
+
+.mobile-menu-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: auto;
+    margin-bottom: 30px;
+}
+
+.mobile-menu-list a {
+    text-decoration: none;
+    color: var(--text-silver);
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: block;
+    padding: 10px 0;
+    transition: var(--transition-premium);
+    text-transform: uppercase;
+}
+
+.mobile-menu-list a:hover,
+.mobile-menu-list a.active {
+    color: var(--primary-gold);
+    padding-left: 10px;
+}
+
+/* Mobile dropdown content styling */
+.mobile-dropdown-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobile-caret {
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+.mobile-dropdown-content {
+    list-style: none;
+    padding-left: 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+}
+
+.mobile-dropdown-trigger.active .mobile-dropdown-content {
+    max-height: 500px; /* Big enough for dynamic list */
+    margin-top: 10px;
+    padding: 10px 20px;
+}
+
+.mobile-dropdown-content li a {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-muted);
+    text-transform: capitalize;
+}
+
+.mobile-dropdown-content li a:hover {
+    color: var(--primary-gold);
+}
+
+.mobile-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: auto;
+}
+
+.mobile-btn {
+    width: 100%;
+    justify-content: center;
+}
+
+/* Overlay Background for active mobile drawer */
+.mobile-nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    z-index: 1999;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition-premium);
+}
+
+.mobile-nav-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ==========================================================================
+   ENQUIRY NOW MODAL (Premium Glassmorphism & Custom Elements)
+   ========================================================================== */
+.header-modal {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition-premium);
+    padding: 20px;
+}
+
+.header-modal.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.header-modal-content {
+    background-color: var(--bg-dark-slate);
+    border: 2px solid var(--primary-gold);
+    padding: 40px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+    position: relative;
+    transform: scale(0.9) translateY(-20px);
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    color: var(--text-white);
+}
+
+.header-modal.show .header-modal-content {
+    transform: scale(1) translateY(0);
+}
+
+.header-modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: var(--text-silver);
+    font-size: 20px;
+    cursor: pointer;
+    transition: var(--transition-premium);
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.header-modal-close:hover {
+    color: var(--primary-gold);
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.1);
+}
+
+.modal-title {
+    font-family: var(--font-heading);
+    color: var(--primary-gold);
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.modal-subtitle {
+    color: var(--text-silver);
+    font-size: 14.5px;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.header-form-control {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid var(--bg-dark-slate-light);
+    background: rgba(0, 0, 0, 0.2);
+    color: var(--text-white);
+    border-radius: 6px;
+    font-family: var(--font-primary);
+    font-size: 14.5px;
+    transition: var(--transition-premium);
+}
+
+.header-form-control::placeholder {
+    color: var(--text-muted);
+}
+
+.header-form-control:focus {
+    outline: none;
+    border-color: var(--primary-gold);
+    background: rgba(0, 0, 0, 0.35);
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.15);
+}
+
+.header-form-control:focus-visible {
+    outline: none;
+}
+
+textarea.header-form-control {
+    resize: none;
+}
+
+.w-100 {
+    width: 100%;
+    justify-content: center;
+}
+
+/* Custom premium alerts */
+.alert {
+    padding: 12px 18px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-left: 4px solid transparent;
+}
+
+.alert-success {
+    background: rgba(40, 167, 69, 0.15);
+    color: #2e7d32;
+    border-left-color: #2e7d32;
+}
+
+.alert-success i {
+    color: #2e7d32;
+}
+
+.alert-danger {
+    background: rgba(220, 53, 69, 0.15);
+    color: #c62828;
+    border-left-color: #c62828;
+}
+
+.alert-danger i {
+    color: #c62828;
+}
+
+
+/* ==========================================================================
+   RESPONSIVE DESIGN BREAKPOINTS
+   ========================================================================== */
+
+/* Standard Desktop Hover support hover effects */
+@media (min-width: 1025px) {
+    .nav-item:hover {
+        color: var(--primary-gold);
+    }
+}
+
+/* Tablet & Smaller Desktop Adjustments */
+@media screen and (max-width: 1280px) {
+    .nav-links {
+        gap: 25px;
+    }
+    
+    .nav-item {
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+    
+    .logo-container {
+        width: 100px;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+    
+    .phone-number-text {
+        display: none; /* Hide number to fit screen */
+    }
+    
+    .btn-outline {
+        padding: 10px 14px; /* Maintain small circular outline for phone icon */
+    }
+}
+
+/* Hide desktop menu & show mobile hamburger */
+@media screen and (max-width: 1024px) {
+    .top-bar {
+        display: none; /* Hide top bar completely on tablet/mobile */
+    }
+    
+    .header {
+        top: 0; /* Align directly to top */
+    }
+    
+    .header-container {
+        height: 80px;
+    }
+    
+    .header.scrolled .header-container {
+        height: 70px;
+    }
+    
+    .main-nav, 
+    .header-buttons {
+        display: none !important; /* Hide desktop nav and buttons */
+    }
+    
+    .mobile-toggle {
+        display: block;
+    }
+    
+    .logo-container {
+        width: 95px;
+    }
+    
+    .header.scrolled .logo-container {
+        width: 85px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header-container {
+        padding: 0 20px;
+    }
+    
+    .logo-container {
+        width: 85px;
+    }
+    
+    .mobile-nav {
+        width: 90%;
+        padding: 25px;
+    }
+    
+    .header-modal-content {
+        padding: 30px 20px;
+    }
+    
+    .modal-title {
+        font-size: 26px;
+    }
+}
