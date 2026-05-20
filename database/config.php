@@ -1,8 +1,8 @@
 <?php
 $host = 'localhost';
-$username = 'root';
-$password = '';
-$database = 'gurugharestate';
+$username = 'mineib_i1_mineib';
+$password = 'Rd14072003@./';
+$database = 'mineib_i1_gurugharestate';
 
 $conn = new mysqli($host, $username, $password, $database);
 

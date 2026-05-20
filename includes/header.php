@@ -79,20 +79,19 @@ if (file_exists(__DIR__ . '/../database/config.php')) {
 <!-- includes/header.php -->
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link rel="stylesheet" href="assets/css/header.css">
+<link rel="stylesheet" href="assets/css/header.css?v=<?= time() ?>">
 
 <!-- Slim Premium Top Bar -->
 <div class="header-fixed-wrapper" id="header-fixed-wrapper">
     <div class="top-bar" id="top-bar">
         <div class="top-bar-container">
-            <div class="top-bar-left">
+            <div class="top-bar-content">
                 <span class="top-bar-tag"><i class="fa-solid fa-location-dot"></i> Location - Faridabad, Haryana India</span>
                 <span class="divider">|</span>
                 <span class="top-bar-tag"><i class="fa-solid fa-envelope"></i> <a href="mailto:gurugharestates@gmail.com">gurugharestates@gmail.com</a></span>
                 <span class="divider">|</span>
                 <span class="top-bar-tag"><i class="fa-solid fa-envelope"></i> <a href="mailto:batra.consultants@gmail.com">batra.consultants@gmail.com</a></span>
-            </div>
-            <div class="top-bar-right">
+                <span class="divider">|</span>
                 <span class="top-bar-tag"><i class="fa-solid fa-phone"></i> <a href="tel:+918851404063">+91-8851404063</a></span>
                 <span class="divider">|</span>
                 <span class="top-bar-tag"><i class="fa-solid fa-phone"></i> <a href="tel:+919999566126">+91-9999566126</a></span>
@@ -106,7 +105,7 @@ if (file_exists(__DIR__ . '/../database/config.php')) {
             <!-- Static Left Logo -->
             <div class="logo-container" id="logo-container">
                 <a href="index.php">
-                    <img src="assets/gurgarestates-logo.png" alt="Guru Ghar Estates Logo" id="logo-image">
+                    <img src="assets/gurgarestates-logo.png?v=<?= time() ?>" alt="Guru Ghar Estates Logo" id="logo-image" onerror="this.onerror=null; this.src='assets/rr-home-logo.png';">
                 </a>
             </div>
 
@@ -157,7 +156,7 @@ if (file_exists(__DIR__ . '/../database/config.php')) {
 <div class="mobile-nav" id="mobile-nav">
     <div class="mobile-nav-header">
         <div class="mobile-logo">
-            <img src="assets/gurgarestates-logo.png" alt="Guru Ghar Estates Logo">
+            <img src="assets/gurgarestates-logo.png?v=<?= time() ?>" alt="Guru Ghar Estates Logo" onerror="this.onerror=null; this.src='assets/rr-home-logo.png';">
         </div>
         <div class="mobile-nav-close" id="mobile-nav-close">
             <i class="fa-solid fa-xmark"></i>

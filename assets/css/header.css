@@ -55,22 +55,24 @@
 .top-bar-container {
     max-width: 1600px;
     margin: 0 auto;
-    padding: 10px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 8px 40px;
 }
 
-.top-bar-left {
+.top-bar-content {
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 15px;
+    flex-wrap: wrap;
+    gap: 8px 0;
+    width: 100%;
 }
 
 .top-bar-tag {
     display: flex;
     align-items: center;
     gap: 6px;
+    font-size: 12.5px;
+    color: var(--text-silver);
 }
 
 .top-bar-tag i {
@@ -79,14 +81,14 @@
 }
 
 .top-bar .divider {
-    color: var(--bg-dark-slate-light);
-    opacity: 0.5;
-}
-
-.top-bar-right {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.18);
+    margin: 0 15px;
+    vertical-align: middle;
+    font-size: 0;
+    opacity: 0.6;
 }
 
 .top-bar a {
@@ -807,5 +809,15 @@ textarea.header-form-control {
     
     .modal-title {
         font-size: 26px;
+    }
+}
+
+/* ==========================================================================
+   GLOBAL SUBPAGE MARGIN OFFSETS FOR FIXED HEADER (Avoids desktop overlaps)
+   ========================================================================== */
+@media screen and (min-width: 1025px) {
+    .page-hero, 
+    .project-hero {
+        margin-top: 138px !important;
     }
 }
