@@ -265,16 +265,27 @@
     position: relative;
     width: 100%;
     max-width: 650px;
+    border-radius: 16px;
+    border: 1.5px solid rgba(212, 175, 55, 0.18);
+    background: rgba(48, 47, 53, 0.4);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3), inset 0 0 40px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    aspect-ratio: 563 / 626; /* Perfect crop box matched to SVG dimensions */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 
 /* High-performance Vector Gold-Tinged styling filter */
 .main-map-img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     /* Custom mathematical visual tint matrix converting vector map paths to warm gold/bronze metallic outline overlays */
     filter: invert(72%) sepia(21%) saturate(980%) hue-rotate(345deg) brightness(0.85) contrast(0.92) drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4));
     opacity: 0.38;
     transition: var(--map-transition);
+    transform: scale(4.2);
+    transform-origin: 39.5% 28.25%;
 }
 
 .projects-map-section:hover .main-map-img {
@@ -339,23 +350,23 @@
 
 /* Coordinates corresponding beautifully to NCR visual clustering inside India graphic bounds */
 .pin-delhi {
-    top: 25%;
-    left: 38%;
+    top: 36.35%;
+    left: 43.7%;
 }
 
 .pin-gurugram {
-    top: 28%;
-    left: 34%;
+    top: 48.95%;
+    left: 26.9%;
 }
 
 .pin-faridabad {
-    top: 32%;
-    left: 41%;
+    top: 65.75%;
+    left: 56.3%;
 }
 
 .pin-noida {
-    top: 28%;
-    left: 45%;
+    top: 48.95%;
+    left: 73.1%;
 }
 
 /* ==========================================================================
