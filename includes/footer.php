@@ -1,57 +1,97 @@
 <!-- includes/footer.php -->
-<link rel="stylesheet" href="assets/css/footer.css">
+<link rel="stylesheet" href="assets/css/footer.css?v=<?= time() ?>">
 
 <footer class="footer">
-    <div class="footer-container">
+    <!-- Premium Consultation CTA Strip -->
+    <div class="footer-cta-strip">
+        <div class="footer-cta-container">
+            <div class="footer-cta-text">
+                <h3>Elevate Your Living Experience</h3>
+                <p>Consult with our luxury residential floor experts and build your dream home today.</p>
+            </div>
+            <div class="footer-cta-action">
+                <a href="contact-us.php" class="footer-cta-btn">Book Consultation <i class="fa-solid fa-arrow-right-long"></i></a>
+            </div>
+        </div>
+    </div>
 
+    <div class="footer-container">
         <!-- Top Footer Grid -->
         <div class="footer-grid">
 
-            <!-- Col 1: Branding -->
+            <!-- Col 1: Branding & Profile -->
             <div class="footer-col branding-col">
-                <img src="assets/footer-logo.png" alt="RR Homes" class="footer-logo">
+                <div class="footer-brand-wrap">
+                    <img src="assets/gurgarestates-logo.png?v=<?= time() ?>" alt="Guru Ghar Estate" class="footer-logo" onerror="this.onerror=null; this.src='assets/rr-home-logo.png';">
+                </div>
                 <p class="tagline">Building Dreams, Delivering Luxury</p>
-                <p class="desc">Experience the pinnacle of sophisticated living tailored to exceed your expectations.
-                </p>
+                <p class="desc">Experience the absolute pinnacle of sophisticated living tailored to your expectations. Guru Ghar Estate (RR Homes) delivers premium, bespoke residential builder floors across Faridabad and the Delhi NCR region.</p>
 
-                <div class="social-icons" style="margin-top: 25px;">
-                    <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" class="social-icon"><i class="fa-brands fa-whatsapp"></i></a>
+                <!-- High-End Tactile Social Widgets -->
+                <div class="social-icons-wrapper">
+                    <a href="https://www.facebook.com/gurugharestate" target="_blank" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/gurugharestate" target="_blank" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/918851404063" target="_blank" class="social-icon" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
                 </div>
             </div>
 
             <!-- Col 2: Quick Links -->
             <div class="footer-col links-col">
-                <h4 class="col-title">Quick Links</h4>
+                <h4 class="col-title">Quick Navigation</h4>
                 <ul class="footer-links">
-                    <li><a href="../../index.php">Home</a></li>
-                    <li><a href="../../about-us.php">About Us</a></li>
-                    <!-- <li><a href="#">Projects</a></li> -->
-                    <!-- <li><a href="#">Specifications</a></li> -->
-                    <li><a href="../../contact-us.php">Contact Us</a></li>
+                    <li><a href="index.php"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+                    <li><a href="about-us.php"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+                    <li><a href="index.php#projects"><i class="fa-solid fa-chevron-right"></i> Featured Portfolio</a></li>
+                    <li><a href="index.php#specifications"><i class="fa-solid fa-chevron-right"></i> Technical Specs</a></li>
+                    <li><a href="contact-us.php"><i class="fa-solid fa-chevron-right"></i> Contact Us</a></li>
                 </ul>
             </div>
 
-            <!-- Col 3: Contact Info -->
+            <!-- Col 3: Key Presence Areas -->
+            <div class="footer-col presence-col">
+                <h4 class="col-title">Our Presence</h4>
+                <ul class="footer-links">
+                    <li><a href="index.php#projects"><i class="fa-solid fa-location-dot"></i> Faridabad Builder Floors</a></li>
+                    <li><a href="index.php#projects"><i class="fa-solid fa-location-dot"></i> Gurugram Residences</a></li>
+                    <li><a href="index.php#projects"><i class="fa-solid fa-location-dot"></i> South Delhi Luxury Floors</a></li>
+                    <li><a href="index.php#projects"><i class="fa-solid fa-location-dot"></i> Noida Developments</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 4: Sync'd Contacts & Map -->
             <div class="footer-col contact-col">
-                <h4 class="col-title">Contact Us</h4>
+                <h4 class="col-title">Corporate Office</h4>
                 <ul class="contact-list">
-                    <li><i class="fa-solid fa-phone"></i> +91 99711 99138</li>
-                    <li><i class="fa-solid fa-envelope"></i> info@rrhomes.com</li>
-                    <li><i class="fa-solid fa-location-dot"></i> RR Homes, Puri VIP Floors<br>Sector 81,
-                        Faridabad<br>Haryana 121007</li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <div class="contact-info-block">
+                            <a href="tel:+918851404063">+91 88514 04063</a>
+                            <a href="tel:+919999566126">+91 99995 66126</a>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <div class="contact-info-block">
+                            <a href="mailto:gurugharestates@gmail.com">gurugharestates@gmail.com</a>
+                            <a href="mailto:batra.consultants@gmail.com">batra.consultants@gmail.com</a>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div class="contact-info-block text-block">
+                            <strong>RR Homes / Guru Ghar Estate</strong><br>
+                            Puri VIP Floors, Sector 81, Faridabad,<br>
+                            Haryana 121007
+                        </div>
+                    </li>
                 </ul>
-            </div>
 
-            <!-- Col 4: Location Map -->
-            <div class="footer-col map-col">
-                <h4 class="col-title">Find Us Here</h4>
+                <!-- Embedded Location Map -->
                 <div class="footer-map-wrapper">
                     <iframe
                         src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=RR%20Homes,%20Puri%20Vip%20Floors,%20Sector%2081,%20Faridabad&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-                        width="100%" height="200"
-                        style="border:0; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.3);" allowfullscreen=""
+                        width="100%" height="130"
+                        style="border:0; display:block;" allowfullscreen=""
                         loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
                 </div>
@@ -61,59 +101,9 @@
     </div>
 
     <!-- Bottom Strip -->
-    <style>
-        .mineib-credit {
-            font-size: 0.95rem;
-            color: #aaa;
-        }
-
-        .mineib-link {
-            position: relative;
-            color: #d4af37;
-            text-decoration: none;
-            font-weight: 700;
-            transition: color 0.3s ease;
-            display: inline-block;
-        }
-
-        .mineib-link::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 2px;
-            bottom: -3px;
-            left: 0;
-            background: linear-gradient(90deg, #d4af37, #fff, #d4af37);
-            background-size: 200% 100%;
-            transform: scaleX(0);
-            transform-origin: bottom right;
-            transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-        }
-
-        .mineib-link:hover {
-            color: #fff;
-            text-shadow: 0 0 8px rgba(212, 175, 55, 0.6);
-        }
-
-        .mineib-link:hover::after {
-            transform: scaleX(1);
-            transform-origin: bottom left;
-            animation: gradientMove 2s linear infinite;
-        }
-
-        @keyframes gradientMove {
-            0% {
-                background-position: 100% 0;
-            }
-
-            100% {
-                background-position: -100% 0;
-            }
-        }
-    </style>
     <div class="footer-bottom">
         <div class="footer-bottom-container">
-            <p>&copy; <?php echo date('Y'); ?> RR Homes. All rights reserved.</p>
+            <p class="copyright-text">&copy; <?php echo date('Y'); ?> Guru Ghar Estate (RR Homes). All rights reserved.</p>
             <p class="mineib-credit">
                 Website Powered by
                 <a href="https://www.mineib.com" target="_blank" class="mineib-link">

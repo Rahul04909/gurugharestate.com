@@ -7,7 +7,7 @@ $projects = $stmt->get_result();
 <!-- components/projects.php -->
 <link rel="stylesheet" href="assets/css/projects.css">
 
-<section class="projects-section">
+<section id="projects" class="projects-section">
     <div class="projects-container">
         
         <!-- Section Heading -->

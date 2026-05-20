@@ -1,7 +1,7 @@
 <!-- components/specifications.php -->
 <link rel="stylesheet" href="assets/css/specifications.css?v=<?= time() ?>">
 
-<section class="spec-section">
+<section id="specifications" class="spec-section">
     <!-- Ambient Radial Overlays for Premium Aesthetic Consistency -->
     <div class="spec-bg-glow glow-1"></div>
     <div class="spec-bg-glow glow-2"></div>
