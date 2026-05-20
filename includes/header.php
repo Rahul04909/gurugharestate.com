@@ -77,6 +77,7 @@ if (file_exists(__DIR__ . '/../database/config.php')) {
 </script>
 
 <!-- includes/header.php -->
+<link rel="icon" href="assets/gurgarestates-logo.png?v=<?= time() ?>" type="image/png">
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="stylesheet" href="assets/css/header.css?v=<?= time() ?>">
