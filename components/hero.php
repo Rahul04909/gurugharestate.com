@@ -21,7 +21,7 @@
 
         <!-- Slide 3 -->
         <div class="swiper-slide">
-          <img src="assets/hero/hero-banner-3.png" alt="Guru Ghar Estate Banner">
+          <img src="assets/hero/gg-banner-3.png" alt="Guru Ghar Estate Banner">
         </div>
 
       </div>
