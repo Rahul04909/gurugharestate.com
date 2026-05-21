@@ -174,24 +174,39 @@ $seo_featured = htmlspecialchars($project['seo_featured_image']);
         .details-sidebar { 
             background: #ffffff; 
             color: #333; 
-            padding: 40px 35px; 
+            padding: 24px 22px; 
             border-radius: 12px; 
-            box-shadow: 0 15px 45px rgba(0,0,0,0.05); 
+            box-shadow: 0 12px 35px rgba(0,0,0,0.04); 
             border: 1px solid rgba(212,175,55,0.15);
-            border-top: 6px solid #d4af37; 
+            border-top: 5px solid #d4af37; 
             align-self: flex-start; 
             position: sticky; 
-            top: 140px; 
+            top: 100px; 
             transition: all 0.3s ease;
         }
         .details-sidebar:hover {
-            box-shadow: 0 20px 55px rgba(212,175,55,0.08);
+            box-shadow: 0 18px 45px rgba(212,175,55,0.08);
             border-color: rgba(212,175,55,0.3);
         }
 
-        .sidebar-header { margin-bottom: 25px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
-        .sidebar-header h3 { font-size: 1.4rem; text-transform: uppercase; margin: 0; color: #222; font-weight: 800; line-height: 1.4;}
-        .sidebar-header p { color: #666; margin-top: 8px; font-size: 0.9rem; line-height: 1.5; }
+        .sidebar-header { margin-bottom: 18px; border-bottom: 1px solid #f0f0f0; padding-bottom: 14px; position: relative; }
+        .sidebar-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background: rgba(212, 175, 55, 0.1);
+            color: #d4af37;
+            padding: 4px 10px;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-radius: 3px;
+            margin-bottom: 8px;
+            border: 1px solid rgba(212, 175, 55, 0.15);
+        }
+        .sidebar-header h3 { font-family: 'Playfair Display', serif; font-size: 1.25rem; text-transform: uppercase; margin: 0; color: #222; font-weight: 700; line-height: 1.3;}
+        .sidebar-header p { color: #666; margin-top: 6px; font-size: 0.85rem; line-height: 1.4; }
         
         .section-title { 
             font-family: 'Playfair Display', serif;
@@ -242,14 +257,14 @@ $seo_featured = htmlspecialchars($project['seo_featured_image']);
         }
         
         .form-group-custom { 
-            margin-bottom: 20px; 
+            margin-bottom: 12px; 
         }
         .form-group-custom label { 
             display: block; 
             font-weight: 600; 
-            margin-bottom: 8px; 
-            color: #444; 
-            font-size: 0.8rem; 
+            margin-bottom: 5px; 
+            color: #555; 
+            font-size: 0.75rem; 
             text-transform: uppercase; 
             letter-spacing: 0.5px;
         }
@@ -263,42 +278,43 @@ $seo_featured = htmlspecialchars($project['seo_featured_image']);
         }
         .input-icon-wrapper i {
             position: absolute;
-            left: 15px;
+            left: 14px;
             color: #d4af37;
-            font-size: 14px;
+            font-size: 12px;
             pointer-events: none;
             transition: all 0.3s ease;
             z-index: 2;
         }
         .input-icon-wrapper input {
-            padding: 14px 15px 14px 45px !important;
+            padding: 10px 12px 10px 38px !important;
             font-family: 'Outfit', sans-serif !important;
-            font-size: 14px !important;
-            border: 1px solid rgba(0,0,0,0.08) !important;
+            font-size: 13px !important;
+            border: 1px solid rgba(0,0,0,0.06) !important;
             background: #fafafa !important;
-            border-radius: 8px !important;
+            border-radius: 6px !important;
             width: 100%;
             transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
             box-sizing: border-box !important;
         }
         .input-icon-wrapper textarea {
-            padding: 14px 15px 14px 45px !important;
+            padding: 10px 12px 10px 38px !important;
             font-family: 'Outfit', sans-serif !important;
-            font-size: 14px !important;
-            border: 1px solid rgba(0,0,0,0.08) !important;
+            font-size: 13px !important;
+            border: 1px solid rgba(0,0,0,0.06) !important;
             background: #fafafa !important;
-            border-radius: 8px !important;
+            border-radius: 6px !important;
             width: 100%;
             transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
             box-sizing: border-box !important;
             resize: none !important;
-            min-height: 90px !important;
+            min-height: 65px !important;
+            overflow: hidden !important;
         }
         .textarea-wrapper {
             align-items: flex-start;
         }
         .textarea-wrapper i {
-            top: 16px;
+            top: 12px;
         }
         
         /* Focus state effects */
@@ -306,8 +322,9 @@ $seo_featured = htmlspecialchars($project['seo_featured_image']);
         .input-icon-wrapper textarea:focus {
             border-color: #d4af37 !important;
             background: #ffffff !important;
-            box-shadow: 0 5px 15px rgba(212,175,55,0.08) !important;
+            box-shadow: 0 4px 12px rgba(212,175,55,0.1) !important;
             outline: none !important;
+            transform: scale(1.01);
         }
         .input-icon-wrapper input:focus + i,
         .input-icon-wrapper textarea:focus + i {
@@ -320,14 +337,15 @@ $seo_featured = htmlspecialchars($project['seo_featured_image']);
 
         /* Premium Form Button */
         .premium-submit-btn {
-            background: #d4af37;
+            position: relative;
+            background: linear-gradient(135deg, #d4af37 0%, #b89324 100%);
             color: #ffffff;
             border: none;
-            border-radius: 8px;
-            padding: 15px 25px;
+            border-radius: 6px;
+            padding: 11px 20px;
             font-family: 'Outfit', sans-serif;
             font-weight: 700;
-            font-size: 14px;
+            font-size: 13px;
             text-transform: uppercase;
             letter-spacing: 1px;
             cursor: pointer;
@@ -337,19 +355,55 @@ $seo_featured = htmlspecialchars($project['seo_featured_image']);
             justify-content: center;
             gap: 10px;
             transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-            box-shadow: 0 5px 20px rgba(212,175,55,0.25);
+            box-shadow: 0 4px 15px rgba(212,175,55,0.2);
             outline: none;
             box-sizing: border-box;
-            margin-top: 10px;
+            overflow: hidden;
+            margin-top: 5px;
+        }
+        .premium-submit-btn::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -50%;
+            width: 30%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0) 100%);
+            transform: skewX(-25deg);
+            transition: 0.75s;
+        }
+        .premium-submit-btn:hover::after {
+            left: 120%;
         }
         .premium-submit-btn:hover {
             background: #222;
-            box-shadow: 0 8px 25px rgba(34,34,34,0.2);
+            box-shadow: 0 6px 18px rgba(34,34,34,0.25);
             transform: translateY(-2px);
             color: #d4af37;
         }
         .premium-submit-btn:active {
             transform: translateY(0);
+        }
+
+        .form-trust-badges {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 12px;
+            padding-top: 10px;
+            border-top: 1px solid rgba(0,0,0,0.04);
+            gap: 10px;
+        }
+        .trust-badge-item {
+            font-size: 10.5px;
+            color: #777;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .trust-badge-item i {
+            color: #d4af37;
+            font-size: 11px;
         }
         
         .gallery-grid { 
@@ -450,8 +504,9 @@ $seo_featured = htmlspecialchars($project['seo_featured_image']);
 
             <div class="details-sidebar">
                 <div class="sidebar-header">
-                    <h3>Interested in <br><span style="color:#d4af37;"><?= $title ?></span>?</h3>
-                    <p>Fill out the form below and our real estate experts will get back to you shortly.</p>
+                    <div class="sidebar-badge"><i class="fa-solid fa-bolt-lightning"></i> Instant Response</div>
+                    <h3>Interested in <span style="color:#d4af37;"><?= $title ?></span>?</h3>
+                    <p>Contact our elite real estate specialists directly.</p>
                 </div>
                 
                 <?php
@@ -467,9 +522,9 @@ $seo_featured = htmlspecialchars($project['seo_featured_image']);
                     $sql = "INSERT INTO enquiries (name, email, phone, message, source) VALUES ('$name', '$email', '$phone', '$message', '$source')";
                     
                     if(mysqli_query($conn, $sql)) {
-                        $enq_msg = "<div style='color:#28a745; background:rgba(40,167,69,0.1); padding:15px; border-radius:5px; margin-bottom:20px; font-weight:bold; border-left:4px solid #28a745;'>Thank you! Your enquiry has been completely received. Our team will contact you.</div>";
+                        $enq_msg = "<div style='color:#28a745; background:rgba(40,167,69,0.1); padding:10px; border-radius:5px; margin-bottom:15px; font-weight:bold; font-size:13px; border-left:4px solid #28a745;'>Thank you! Your enquiry has been completely received. Our team will contact you.</div>";
                     } else {
-                        $enq_msg = "<div style='color:#dc3545; background:rgba(220,53,69,0.1); padding:15px; border-radius:5px; margin-bottom:20px; font-weight:bold; border-left:4px solid #dc3545;'>Error submitting enquiry. Please try again.</div>";
+                        $enq_msg = "<div style='color:#dc3545; background:rgba(220,53,69,0.1); padding:10px; border-radius:5px; margin-bottom:15px; font-weight:bold; font-size:13px; border-left:4px solid #dc3545;'>Error submitting enquiry. Please try again.</div>";
                     }
                 }
                 ?>
@@ -501,13 +556,17 @@ $seo_featured = htmlspecialchars($project['seo_featured_image']);
                         <label>Your Message</label>
                         <div class="input-icon-wrapper textarea-wrapper">
                             <i class="fa-solid fa-message"></i>
-                            <textarea name="message" rows="3" placeholder="How can we help you?" required>I am interested in the <?= $title ?> project and would like to know more details.</textarea>
+                            <textarea name="message" rows="2" placeholder="How can we help you?" required>I am interested in the <?= $title ?> project and would like to know more details.</textarea>
                         </div>
                     </div>
                     <button type="submit" name="submit_enquiry" class="premium-submit-btn">
                         <span>SUBMIT ENQUIRY</span>
                         <i class="fa-solid fa-paper-plane"></i>
                     </button>
+                    <div class="form-trust-badges">
+                        <div class="trust-badge-item"><i class="fa-solid fa-clock-rotate-left"></i> Response in 15m</div>
+                        <div class="trust-badge-item"><i class="fa-solid fa-shield-halved"></i> 100% Privacy</div>
+                    </div>
                 </form>
             </div>
         </div>
