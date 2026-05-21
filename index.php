@@ -9,21 +9,21 @@
     <title>Guru Ghar Estate | Premier Real Estate Construction & Consultancy in Faridabad</title>
     <meta name="description" content="Guru Ghar Estate is a premier real estate construction and consultancy company in Faridabad, Delhi NCR, delivering high-quality residential homes and premium builder floors.">
     <meta name="keywords" content="Guru Ghar Estate, Real Estate Faridabad, Builder Floors Faridabad, Real Estate Delhi NCR, Construction Faridabad, Property Consultancy, Luxury Floors">
-    <link rel="icon" href="assets/favicon.png?v=<?= time() ?>" type="image/png">
+    <link rel="icon" href="assets/gurughar.jpeg?v=<?= time() ?>" type="image/png">
 
     <!-- Open Graph / Facebook SEO -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://gurugharestate.com/">
     <meta property="og:title" content="Guru Ghar Estate | Premier Real Estate Construction & Consultancy in Faridabad">
     <meta property="og:description" content="Guru Ghar Estate is a premier real estate construction and consultancy company in Faridabad, Delhi NCR, delivering high-quality residential homes and premium builder floors.">
-    <meta property="og:image" content="https://gurugharestate.com/assets/gurgarestates-logo.png">
+    <meta property="og:image" content="https://gurugharestate.com/assets/gurghar.jpeg">
 
     <!-- Twitter Card SEO -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://gurugharestate.com/">
     <meta name="twitter:title" content="Guru Ghar Estate | Premier Real Estate Construction & Consultancy in Faridabad">
     <meta name="twitter:description" content="Guru Ghar Estate is a premier real estate construction and consultancy company in Faridabad, Delhi NCR, delivering high-quality residential homes and premium builder floors.">
-    <meta name="twitter:image" content="https://gurugharestate.com/assets/gurgarestates-logo.png">
+    <meta name="twitter:image" content="https://gurugharestate.com/assets/gurghar.jpeg">
 </head>
 <body>
 
