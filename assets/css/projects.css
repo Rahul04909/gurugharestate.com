@@ -79,12 +79,77 @@
 }
 
 /* ==========================================================================
-   PROJECTS GRID & CARDS
+   PROJECTS SLIDER & CARDS
    ========================================================================== */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-    gap: 40px;
+.projects-header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 50px;
+}
+
+.projects-header-flex .section-heading {
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.projects-header-flex .projects-title-underline {
+    margin: 0 0 24px 0;
+}
+
+.projects-header-flex .section-heading p {
+    margin: 0;
+}
+
+/* Slider Nav Buttons */
+.projects-slider-nav {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+    flex-shrink: 0;
+}
+
+.projects-prev-btn,
+.projects-next-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--p-gold);
+    background: transparent;
+    color: var(--p-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+    transition: var(--p-transition);
+    outline: none;
+}
+
+.projects-prev-btn:hover,
+.projects-next-btn:hover {
+    background: var(--p-gold);
+    color: #ffffff;
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+    transform: scale(1.05);
+}
+
+.projects-prev-btn:active,
+.projects-next-btn:active {
+    transform: scale(0.95);
+}
+
+/* Swiper Container */
+.projects-slider {
+    padding: 15px 5px 35px 5px !important;
+    margin: 0 -5px;
+    overflow: hidden;
+}
+
+.projects-slider .swiper-slide {
+    height: auto; /* Stretches cards in the row to equal height */
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card {
@@ -96,6 +161,7 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    height: 100%;
 }
 
 .project-card:hover {
@@ -365,12 +431,6 @@
 /* ==========================================================================
    RESPONSIVE DESIGN BREAKPOINTS
    ========================================================================== */
-@media screen and (max-width: 1200px) {
-    .projects-grid {
-        gap: 30px;
-    }
-}
-
 @media screen and (max-width: 992px) {
     .projects-section {
         padding: 90px 30px;
@@ -379,11 +439,6 @@
     .section-heading h2 {
         font-size: 38px;
     }
-    
-    .projects-grid {
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        gap: 30px;
-    }
 }
 
 @media screen and (max-width: 768px) {
@@ -391,16 +446,29 @@
         padding: 70px 20px;
     }
     
-    .section-heading {
-        margin-bottom: 50px;
+    .projects-header-flex {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .projects-header-flex .section-heading {
+        text-align: center;
+    }
+
+    .projects-header-flex .projects-title-underline {
+        margin: 0 auto 20px auto;
+    }
+    
+    .projects-slider-nav {
+        margin-top: 10px;
+        width: 100%;
+        justify-content: center;
     }
     
     .section-heading h2 {
         font-size: 32px;
-    }
-    
-    .projects-grid {
-        grid-template-columns: 1fr;
     }
     
     .card-img-wrapper {
