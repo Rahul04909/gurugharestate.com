@@ -108,7 +108,7 @@ if (isset($conn)) {
                         <i class="fa-solid fa-location-dot"></i>
                         <div class="contact-info-block text-block">
                             <strong>Guru Ghar Estate</strong><br>
-                            Puri VIP Floors, Sector 81, Faridabad,<br>
+                            JC-21, Ground Floor, Sector - 81, Puri VIP Floors.<br>
                             Haryana 121007
                         </div>
                     </li>

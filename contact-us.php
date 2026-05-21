@@ -600,7 +600,7 @@
                         <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
                         <div class="info-content">
                             <h3>Our Headquarters</h3>
-                            <p>Puri VIP Floors, Sector 81,<br>Faridabad, Haryana 121007</p>
+                            <p>JC-21, Ground Floor, Sector - 81, Puri VIP Floors.<br>Faridabad, Haryana 121007</p>
                         </div>
                     </div>
                     
