@@ -22,7 +22,7 @@
                 <div class="loc-card active" data-location="faridabad">
                     <span class="loc-dot"></span>
                     <div class="loc-card-info">
-                        <h4>Faridabad (HQ)</h4>
+                        <h4>Faridabad</h4>
                         <span class="loc-count">15+ Floors</span>
                     </div>
                 </div>
@@ -74,7 +74,7 @@
             <div class="map-tooltip-box">
                 <div class="tooltip-header">
                     <span class="tooltip-badge">CORE LUXURY HUB</span>
-                    <h4 id="tooltip-title">Faridabad (HQ)</h4>
+                    <h4 id="tooltip-title">Faridabad</h4>
                 </div>
                 <p id="tooltip-desc">15+ Handcrafted premium builder floors in elite Sectors 14, 15, 21, and 85. Our main center of design excellence featuring European architectural elevations, marble flooring, and modular setups.</p>
                 <div class="tooltip-footer">
@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Interactive details database for mapping selector nodes
     const locationData = {
         faridabad: {
-            title: "Faridabad (HQ)",
+            title: "Faridabad",
             badge: "CORE LUXURY HUB",
             desc: "15+ Handcrafted premium builder floors in elite Sectors 14, 15, 21, and 85. Our main center of design excellence featuring European architectural elevations, marble flooring, and modular setups.",
             status: "Ready to Move & Ongoing",

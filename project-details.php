@@ -35,6 +35,7 @@ $seo_featured = htmlspecialchars($project['seo_featured_image']);
     <title><?= htmlspecialchars($project['seo_meta_title'] ?: $project['title']) ?> | Guru Ghar Estate</title>
     <meta name="description" content="<?= htmlspecialchars($project['seo_meta_description'] ?: $short_description) ?>">
     <meta name="keywords" content="<?= htmlspecialchars($project['seo_meta_keywords']) ?>">
+    <link rel="icon" href="assets/favicon.png?v=<?= time() ?>" type="image/png">
     <?php if($project['seo_schema']): ?>
     <script type="application/ld+json">
     <?= $project['seo_schema'] ?>

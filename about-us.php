@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Guru Ghar Estate</title>
     <meta name="description" content="Guru Ghar Estate is one of the fastest-growing construction and real estate consultancy companies in Faridabad, Delhi NCR, delivering high-quality residential builder floors.">
+    <link rel="icon" href="assets/favicon.png?v=<?= time() ?>" type="image/png">
     
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
