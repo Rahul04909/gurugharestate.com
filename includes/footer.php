@@ -1,6 +1,25 @@
 <!-- includes/footer.php -->
 <link rel="stylesheet" href="assets/css/footer.css?v=<?= time() ?>">
 
+<?php
+// Safely ensure the database connection is initialized for footer query
+if (!isset($conn)) {
+    $config_path = __DIR__ . '/../database/config.php';
+    if (file_exists($config_path)) {
+        require_once $config_path;
+    }
+}
+
+$footer_projects = null;
+if (isset($conn)) {
+    $footer_stmt = $conn->prepare("SELECT id, title FROM projects ORDER BY id DESC LIMIT 5");
+    if ($footer_stmt) {
+        $footer_stmt->execute();
+        $footer_projects = $footer_stmt->get_result();
+    }
+}
+?>
+
 <footer class="footer">
     <!-- Premium Consultation CTA Strip -->
     <div class="footer-cta-strip">
@@ -47,14 +66,23 @@
                 </ul>
             </div>
 
-            <!-- Col 3: Key Presence Areas -->
+            <!-- Col 3: Dynamic Projects List -->
             <div class="footer-col presence-col">
-                <h4 class="col-title">Our Presence</h4>
+                <h4 class="col-title">Our Projects</h4>
                 <ul class="footer-links">
-                    <li><a href="index.php#projects"><i class="fa-solid fa-location-dot"></i> Faridabad Builder Floors</a></li>
-                    <li><a href="index.php#projects"><i class="fa-solid fa-location-dot"></i> Gurugram Residences</a></li>
-                    <li><a href="index.php#projects"><i class="fa-solid fa-location-dot"></i> South Delhi Luxury Floors</a></li>
-                    <li><a href="index.php#projects"><i class="fa-solid fa-location-dot"></i> Noida Developments</a></li>
+                    <?php if (isset($footer_projects) && $footer_projects && $footer_projects->num_rows > 0): ?>
+                        <?php while ($f_proj = $footer_projects->fetch_assoc()): ?>
+                            <li>
+                                <a href="project-details.php?id=<?= $f_proj['id'] ?>">
+                                    <i class="fa-solid fa-building"></i> <?= htmlspecialchars($f_proj['title']) ?>
+                                </a>
+                            </li>
+                        <?php endwhile; ?>
+                    <?php else: ?>
+                        <li><a href="index.php#projects"><i class="fa-solid fa-building"></i> Faridabad Luxury Floors</a></li>
+                        <li><a href="index.php#projects"><i class="fa-solid fa-building"></i> Gurugram Residences</a></li>
+                        <li><a href="index.php#projects"><i class="fa-solid fa-building"></i> South Delhi Luxury Floors</a></li>
+                    <?php endif; ?>
                 </ul>
             </div>
 
