@@ -60,8 +60,8 @@ if (isset($conn)) {
                 <ul class="footer-links">
                     <li><a href="index.php"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
                     <li><a href="about-us.php"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
-                    <li><a href="index.php#projects"><i class="fa-solid fa-chevron-right"></i> Featured Portfolio</a></li>
-                    <li><a href="index.php#specifications"><i class="fa-solid fa-chevron-right"></i> Technical Specs</a></li>
+                    <!-- <li><a href="index.php#projects"><i class="fa-solid fa-chevron-right"></i> Featured Portfolio</a></li>
+                    <li><a href="index.php#specifications"><i class="fa-solid fa-chevron-right"></i> Technical Specs</a></li> -->
                     <li><a href="contact-us.php"><i class="fa-solid fa-chevron-right"></i> Contact Us</a></li>
                 </ul>
             </div>
