@@ -174,7 +174,7 @@ $seo_featured = htmlspecialchars($project['seo_featured_image']);
         .details-sidebar { 
             background: #ffffff; 
             color: #333; 
-            padding: 35px 30px; 
+            padding: 40px 35px; 
             border-radius: 12px; 
             box-shadow: 0 15px 45px rgba(0,0,0,0.05); 
             border: 1px solid rgba(212,175,55,0.15);
@@ -182,18 +182,12 @@ $seo_featured = htmlspecialchars($project['seo_featured_image']);
             align-self: flex-start; 
             position: sticky; 
             top: 140px; 
-            max-height: calc(100vh - 180px); 
-            overflow-y: auto;
             transition: all 0.3s ease;
         }
         .details-sidebar:hover {
             box-shadow: 0 20px 55px rgba(212,175,55,0.08);
             border-color: rgba(212,175,55,0.3);
         }
-        
-        .details-sidebar::-webkit-scrollbar { width: 4px; }
-        .details-sidebar::-webkit-scrollbar-track { background: #fbfbfb; }
-        .details-sidebar::-webkit-scrollbar-thumb { background: #d4af37; border-radius: 4px; }
 
         .sidebar-header { margin-bottom: 25px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
         .sidebar-header h3 { font-size: 1.4rem; text-transform: uppercase; margin: 0; color: #222; font-weight: 800; line-height: 1.4;}
@@ -247,39 +241,114 @@ $seo_featured = htmlspecialchars($project['seo_featured_image']);
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         }
         
-        .form-group-custom { margin-bottom: 18px; }
-        .form-group-custom label { display: block; font-weight: 600; margin-bottom: 8px; color: #444; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px;}
-        .enquiry-form input, .enquiry-form textarea { width: 100%; box-sizing: border-box; padding: 12px 15px; border: 1px solid #ddd; background: #fafafa; color: #333; border-radius: 6px; font-family: inherit; font-size: 0.9rem; transition: all 0.3s;}
-        .enquiry-form input:focus, .enquiry-form textarea:focus { border-color: #d4af37; outline: none; box-shadow: 0 0 0 3px rgba(212,175,55,0.15); background: #fff;}
-        .enquiry-form textarea { resize: none; min-height: 90px; }
-
-        .skew-btn-gold { 
-            display: inline-block; 
-            background-color: #d4af37; 
-            color: #fff; 
-            text-decoration: none; 
-            padding: 14px 20px; 
-            font-weight: 700; 
+        .form-group-custom { 
+            margin-bottom: 20px; 
+        }
+        .form-group-custom label { 
+            display: block; 
+            font-weight: 600; 
+            margin-bottom: 8px; 
+            color: #444; 
+            font-size: 0.8rem; 
             text-transform: uppercase; 
-            font-size: 0.9rem; 
-            letter-spacing: 1px; 
-            border: none; 
-            cursor: pointer; 
-            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); 
-            border-radius: 6px; 
-            width: 100%; 
-            text-align: center; 
-            box-shadow: 0 4px 15px rgba(212,175,55,0.3); 
-            margin-top: 10px;
+            letter-spacing: 0.5px;
+        }
+        
+        /* Enhanced Enquiry Form Styling */
+        .input-icon-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+        .input-icon-wrapper i {
+            position: absolute;
+            left: 15px;
+            color: #d4af37;
+            font-size: 14px;
+            pointer-events: none;
+            transition: all 0.3s ease;
+            z-index: 2;
+        }
+        .input-icon-wrapper input {
+            padding: 14px 15px 14px 45px !important;
+            font-family: 'Outfit', sans-serif !important;
+            font-size: 14px !important;
+            border: 1px solid rgba(0,0,0,0.08) !important;
+            background: #fafafa !important;
+            border-radius: 8px !important;
+            width: 100%;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+            box-sizing: border-box !important;
+        }
+        .input-icon-wrapper textarea {
+            padding: 14px 15px 14px 45px !important;
+            font-family: 'Outfit', sans-serif !important;
+            font-size: 14px !important;
+            border: 1px solid rgba(0,0,0,0.08) !important;
+            background: #fafafa !important;
+            border-radius: 8px !important;
+            width: 100%;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+            box-sizing: border-box !important;
+            resize: none !important;
+            min-height: 90px !important;
+        }
+        .textarea-wrapper {
+            align-items: flex-start;
+        }
+        .textarea-wrapper i {
+            top: 16px;
+        }
+        
+        /* Focus state effects */
+        .input-icon-wrapper input:focus,
+        .input-icon-wrapper textarea:focus {
+            border-color: #d4af37 !important;
+            background: #ffffff !important;
+            box-shadow: 0 5px 15px rgba(212,175,55,0.08) !important;
+            outline: none !important;
+        }
+        .input-icon-wrapper input:focus + i,
+        .input-icon-wrapper textarea:focus + i {
+            color: #222;
+        }
+        .input-icon-wrapper:focus-within i {
+            color: #d4af37;
+            transform: scale(1.1);
+        }
+
+        /* Premium Form Button */
+        .premium-submit-btn {
+            background: #d4af37;
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            padding: 15px 25px;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            box-shadow: 0 5px 20px rgba(212,175,55,0.25);
             outline: none;
+            box-sizing: border-box;
+            margin-top: 10px;
         }
-        .skew-btn-gold:hover { 
-            background-color: #222; 
-            transform: translateY(-2px); 
-            box-shadow: 0 8px 25px rgba(34,34,34,0.25); 
-            color: #d4af37; 
+        .premium-submit-btn:hover {
+            background: #222;
+            box-shadow: 0 8px 25px rgba(34,34,34,0.2);
+            transform: translateY(-2px);
+            color: #d4af37;
         }
-        .skew-btn-gold:active {
+        .premium-submit-btn:active {
             transform: translateY(0);
         }
         
@@ -409,21 +478,36 @@ $seo_featured = htmlspecialchars($project['seo_featured_image']);
                 <form class="enquiry-form" method="POST">
                     <div class="form-group-custom">
                         <label>Full Name</label>
-                        <input type="text" name="name" placeholder="Enter your full name" required>
+                        <div class="input-icon-wrapper">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" name="name" placeholder="Enter your full name" required>
+                        </div>
                     </div>
                     <div class="form-group-custom">
                         <label>Email Address</label>
-                        <input type="email" name="email" placeholder="Enter your email" required>
+                        <div class="input-icon-wrapper">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="email" name="email" placeholder="Enter your email" required>
+                        </div>
                     </div>
                     <div class="form-group-custom">
                         <label>Phone Number</label>
-                        <input type="text" name="phone" placeholder="Enter your phone" required>
+                        <div class="input-icon-wrapper">
+                            <i class="fa-solid fa-phone"></i>
+                            <input type="text" name="phone" placeholder="Enter your phone" required>
+                        </div>
                     </div>
                     <div class="form-group-custom">
                         <label>Your Message</label>
-                        <textarea name="message" rows="3" placeholder="How can we help you?" required>I am interested in the <?= $title ?> project and would like to know more details.</textarea>
+                        <div class="input-icon-wrapper textarea-wrapper">
+                            <i class="fa-solid fa-message"></i>
+                            <textarea name="message" rows="3" placeholder="How can we help you?" required>I am interested in the <?= $title ?> project and would like to know more details.</textarea>
+                        </div>
                     </div>
-                    <button type="submit" name="submit_enquiry" class="skew-btn-gold">SUBMIT ENQUIRY</button>
+                    <button type="submit" name="submit_enquiry" class="premium-submit-btn">
+                        <span>SUBMIT ENQUIRY</span>
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
                 </form>
             </div>
         </div>
