@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit_header_enquiry'
     $name = mysqli_real_escape_string($conn, $_POST['name']);
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $phone = mysqli_real_escape_string($conn, $_POST['phone']);
-    $message = mysqli_real_escape_string($conn, $_POST['message']);
+    $message = isset($_POST['message']) ? mysqli_real_escape_string($conn, $_POST['message']) : '';
     $source = "Header Quick Enquiry";
 
     $sql = "INSERT INTO enquiries (name, email, phone, message, source) VALUES ('$name', '$email', '$phone', '$message', '$source')";
@@ -198,16 +198,16 @@ if (file_exists(__DIR__ . '/../database/config.php')) {
 
         <form method="POST" action="">
             <div class="form-group">
-                <input type="text" name="name" class="header-form-control" placeholder="Your Full Name" required>
+                <input type="text" name="name" class="header-form-control" placeholder="Your Full Name" autocomplete="name" required>
             </div>
             <div class="form-group">
-                <input type="email" name="email" class="header-form-control" placeholder="Your Email Address" required>
+                <input type="email" name="email" class="header-form-control" placeholder="Your Email Address" autocomplete="email" required>
             </div>
             <div class="form-group">
-                <input type="tel" name="phone" class="header-form-control" placeholder="Your Phone Number" required>
+                <input type="tel" name="phone" class="header-form-control" placeholder="Your Phone Number" autocomplete="tel" required>
             </div>
             <div class="form-group">
-                <textarea name="message" class="header-form-control" placeholder="I am interested in..." rows="3" required></textarea>
+                <textarea name="message" class="header-form-control" placeholder="I am interested in... (Optional)" rows="3" autocomplete="off"></textarea>
             </div>
             <button type="submit" name="submit_header_enquiry" class="btn btn-primary w-100">Submit Enquiry</button>
         </form>

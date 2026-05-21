@@ -517,7 +517,7 @@ $seo_featured = htmlspecialchars($project['seo_featured_image']);
                     $name = mysqli_real_escape_string($conn, $_POST['name']);
                     $email = mysqli_real_escape_string($conn, $_POST['email']);
                     $phone = mysqli_real_escape_string($conn, $_POST['phone']);
-                    $message = mysqli_real_escape_string($conn, $_POST['message']);
+                    $message = isset($_POST['message']) ? mysqli_real_escape_string($conn, $_POST['message']) : '';
                     $source = "Project Inquiry: " . mysqli_real_escape_string($conn, $title);
                     
                     $sql = "INSERT INTO enquiries (name, email, phone, message, source) VALUES ('$name', '$email', '$phone', '$message', '$source')";
@@ -536,28 +536,28 @@ $seo_featured = htmlspecialchars($project['seo_featured_image']);
                         <label>Full Name</label>
                         <div class="input-icon-wrapper">
                             <i class="fa-solid fa-user"></i>
-                            <input type="text" name="name" placeholder="Enter your full name" required>
+                            <input type="text" name="name" placeholder="Enter your full name" autocomplete="name" required>
                         </div>
                     </div>
                     <div class="form-group-custom">
                         <label>Email Address</label>
                         <div class="input-icon-wrapper">
                             <i class="fa-solid fa-envelope"></i>
-                            <input type="email" name="email" placeholder="Enter your email" required>
+                            <input type="email" name="email" placeholder="Enter your email" autocomplete="email" required>
                         </div>
                     </div>
                     <div class="form-group-custom">
                         <label>Phone Number</label>
                         <div class="input-icon-wrapper">
                             <i class="fa-solid fa-phone"></i>
-                            <input type="text" name="phone" placeholder="Enter your phone" required>
+                            <input type="tel" name="phone" placeholder="Enter your phone" autocomplete="tel" required>
                         </div>
                     </div>
                     <div class="form-group-custom">
-                        <label>Your Message</label>
+                        <label>Your Message (Optional)</label>
                         <div class="input-icon-wrapper textarea-wrapper">
                             <i class="fa-solid fa-message"></i>
-                            <textarea name="message" rows="2" placeholder="How can we help you?" required>I am interested in the <?= $title ?> project and would like to know more details.</textarea>
+                            <textarea name="message" rows="2" placeholder="How can we help you? (Optional)" autocomplete="off">I am interested in the <?= $title ?> project and would like to know more details.</textarea>
                         </div>
                     </div>
                     <button type="submit" name="submit_enquiry" class="premium-submit-btn">

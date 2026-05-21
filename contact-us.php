@@ -635,7 +635,7 @@
                     $name = mysqli_real_escape_string($conn, $_POST['name']);
                     $email = mysqli_real_escape_string($conn, $_POST['email']);
                     $phone = mysqli_real_escape_string($conn, $_POST['phone']);
-                    $message = mysqli_real_escape_string($conn, $_POST['message']);
+                    $message = isset($_POST['message']) ? mysqli_real_escape_string($conn, $_POST['message']) : '';
                     $source = "Contact Us Page";
                     
                     $sql = "INSERT INTO enquiries (name, email, phone, message, source) VALUES ('$name', '$email', '$phone', '$message', '$source')";
@@ -652,19 +652,19 @@
                 <form class="contact-form" method="POST" action="">
                     <div class="form-group-custom">
                         <label for="form-name">Your Name *</label>
-                        <input type="text" id="form-name" name="name" placeholder="Enter your full name" required>
+                        <input type="text" id="form-name" name="name" placeholder="Enter your full name" autocomplete="name" required>
                     </div>
                     <div class="form-group-custom">
                         <label for="form-email">Email Address *</label>
-                        <input type="email" id="form-email" name="email" placeholder="Enter your email address" required>
+                        <input type="email" id="form-email" name="email" placeholder="Enter your email address" autocomplete="email" required>
                     </div>
                     <div class="form-group-custom">
                         <label for="form-phone">Phone Number *</label>
-                        <input type="tel" id="form-phone" name="phone" placeholder="Enter your mobile number" required>
+                        <input type="tel" id="form-phone" name="phone" placeholder="Enter your mobile number" autocomplete="tel" required>
                     </div>
                     <div class="form-group-custom">
-                        <label for="form-message">Message / Inquiry</label>
-                        <textarea id="form-message" name="message" placeholder="How can we help you today?" required></textarea>
+                        <label for="form-message">Message / Inquiry (Optional)</label>
+                        <textarea id="form-message" name="message" placeholder="How can we help you today? (Optional)" autocomplete="off"></textarea>
                     </div>
                     <button type="submit" name="submit_contact" class="skew-btn-gold">SEND MESSAGE</button>
                 </form>
