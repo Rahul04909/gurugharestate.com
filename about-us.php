@@ -8,7 +8,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Guru Ghar Estate</title>
     <meta name="description" content="Guru Ghar Estate is one of the fastest-growing construction and real estate consultancy companies in Faridabad, Delhi NCR, delivering high-quality residential builder floors.">
+    <meta name="keywords" content="Guru Ghar Estate, About Guru Ghar Estate, Real Estate Faridabad, Construction Specialists, Real Estate Consultants, Luxury Builder Floors">
     <link rel="icon" href="assets/favicon.png?v=<?= time() ?>" type="image/png">
+
+    <!-- Open Graph / Facebook SEO -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gurugharestate.com/about-us.php">
+    <meta property="og:title" content="About Us | Guru Ghar Estate">
+    <meta property="og:description" content="Guru Ghar Estate is one of the fastest-growing construction and real estate consultancy companies in Faridabad, Delhi NCR, delivering high-quality residential builder floors.">
+    <meta property="og:image" content="https://gurugharestate.com/assets/gurgarestates-logo.png">
+
+    <!-- Twitter Card SEO -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://gurugharestate.com/about-us.php">
+    <meta name="twitter:title" content="About Us | Guru Ghar Estate">
+    <meta name="twitter:description" content="Guru Ghar Estate is one of the fastest-growing construction and real estate consultancy companies in Faridabad, Delhi NCR, delivering high-quality residential builder floors.">
+    <meta name="twitter:image" content="https://gurugharestate.com/assets/gurgarestates-logo.png">
     
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">

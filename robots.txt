@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Exclude admin dashboard and system folders from search engines
+Disallow: /admin/
+Disallow: /database/
+Disallow: /includes/
+Disallow: /components/
+Disallow: /sql/
+Disallow: /vendor/
+
+Sitemap: https://gurugharestate.com/sitemap.xml

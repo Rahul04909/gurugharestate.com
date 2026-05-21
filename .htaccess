@@ -1,0 +1,5 @@
+# Enable URL Rewriting
+RewriteEngine On
+
+# Route sitemap.xml requests to sitemap.php
+RewriteRule ^sitemap\.xml$ sitemap.php [L]

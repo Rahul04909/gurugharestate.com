@@ -36,6 +36,29 @@ $seo_featured = htmlspecialchars($project['seo_featured_image']);
     <meta name="description" content="<?= htmlspecialchars($project['seo_meta_description'] ?: $short_description) ?>">
     <meta name="keywords" content="<?= htmlspecialchars($project['seo_meta_keywords']) ?>">
     <link rel="icon" href="assets/favicon.png?v=<?= time() ?>" type="image/png">
+
+    <!-- Open Graph / Facebook SEO -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gurugharestate.com/project-details.php?id=<?= $id ?>">
+    <meta property="og:title" content="<?= htmlspecialchars($project['seo_meta_title'] ?: $project['title']) ?> | Guru Ghar Estate">
+    <meta property="og:description" content="<?= htmlspecialchars($project['seo_meta_description'] ?: $short_description) ?>">
+    <?php if ($seo_featured): ?>
+    <meta property="og:image" content="https://gurugharestate.com/assets/uploads/projects/<?= $seo_featured ?>">
+    <?php else: ?>
+    <meta property="og:image" content="https://gurugharestate.com/assets/gurgarestates-logo.png">
+    <?php endif; ?>
+
+    <!-- Twitter Card SEO -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://gurugharestate.com/project-details.php?id=<?= $id ?>">
+    <meta name="twitter:title" content="<?= htmlspecialchars($project['seo_meta_title'] ?: $project['title']) ?> | Guru Ghar Estate">
+    <meta name="twitter:description" content="<?= htmlspecialchars($project['seo_meta_description'] ?: $short_description) ?>">
+    <?php if ($seo_featured): ?>
+    <meta name="twitter:image" content="https://gurugharestate.com/assets/uploads/projects/<?= $seo_featured ?>">
+    <?php else: ?>
+    <meta name="twitter:image" content="https://gurugharestate.com/assets/gurgarestates-logo.png">
+    <?php endif; ?>
+
     <?php if($project['seo_schema']): ?>
     <script type="application/ld+json">
     <?= $project['seo_schema'] ?>
