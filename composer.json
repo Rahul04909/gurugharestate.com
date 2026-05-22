@@ -1,5 +1,6 @@
 {
     "require": {
-        "summernote/summernote": "^0.8.8"
+        "summernote/summernote": "^0.8.8",
+        "spatie/laravel-medialibrary": "^11.22"
     }
 }

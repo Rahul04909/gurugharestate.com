@@ -48,6 +48,9 @@
     <!-- Include Specifications Section -->
     <?php include 'components/specifications.php'; ?>
 
+    <!-- Include Gallery Section -->
+    <?php include 'components/gallery.php'; ?>
+
     <!-- Include Footer -->
     <?php include 'includes/footer.php'; ?>
 

@@ -37,6 +37,13 @@ $menuItems = [
         ],
     ],
     [
+        "menuTitle" => "Gallery",
+        "icon" => "fas fa-images",
+        "pages" => [
+            ["title" => "Manage Gallery", "url" => $base_url . "gallery/index.php"]
+        ],
+    ],
+    [
         "menuTitle" => "Settings",
         "icon" => "fas fa-cog",
         "pages" => [
