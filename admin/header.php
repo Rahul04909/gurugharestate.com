@@ -446,7 +446,7 @@ $active_page = $active_pageInfo['active_page'] ?? null;
 
         <nav class="main-header navbar navbar-expand navbar-white navbar-light d-flex justify-content-center align-items-center" style="min-height: 60px;">
             <div class="blinking-wrapper" title="Interactive Dashboard Welcome">
-                Welcome to Guru Ghar Estate Admin Dashboard
+                Welcome to GuruGhar Estate Admin Dashboard
             </div>
         </nav>
 

@@ -6,23 +6,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Guru Ghar Estate</title>
-    <meta name="description" content="Guru Ghar Estate is one of the fastest-growing construction and real estate consultancy companies in Faridabad, Delhi NCR, delivering high-quality residential builder floors.">
-    <meta name="keywords" content="Guru Ghar Estate, About Guru Ghar Estate, Real Estate Faridabad, Construction Specialists, Real Estate Consultants, Luxury Builder Floors">
+    <title>About Us | GuruGhar Estate</title>
+    <meta name="description" content="GuruGhar Estate is one of the fastest-growing construction and real estate consultancy companies in Faridabad, Delhi NCR, delivering high-quality residential builder floors.">
+    <meta name="keywords" content="GuruGhar Estate, About GuruGhar Estate, Real Estate Faridabad, Construction Specialists, Real Estate Consultants, Luxury Builder Floors">
     <link rel="icon" href="assets/favicon.png?v=<?= time() ?>" type="image/png">
 
     <!-- Open Graph / Facebook SEO -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://gurugharestate.com/about-us.php">
-    <meta property="og:title" content="About Us | Guru Ghar Estate">
-    <meta property="og:description" content="Guru Ghar Estate is one of the fastest-growing construction and real estate consultancy companies in Faridabad, Delhi NCR, delivering high-quality residential builder floors.">
+    <meta property="og:title" content="About Us | GuruGhar Estate">
+    <meta property="og:description" content="GuruGhar Estate is one of the fastest-growing construction and real estate consultancy companies in Faridabad, Delhi NCR, delivering high-quality residential builder floors.">
     <meta property="og:image" content="https://gurugharestate.com/assets/gurgarestates-logo.png">
 
     <!-- Twitter Card SEO -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://gurugharestate.com/about-us.php">
-    <meta name="twitter:title" content="About Us | Guru Ghar Estate">
-    <meta name="twitter:description" content="Guru Ghar Estate is one of the fastest-growing construction and real estate consultancy companies in Faridabad, Delhi NCR, delivering high-quality residential builder floors.">
+    <meta name="twitter:title" content="About Us | GuruGhar Estate">
+    <meta name="twitter:description" content="GuruGhar Estate is one of the fastest-growing construction and real estate consultancy companies in Faridabad, Delhi NCR, delivering high-quality residential builder floors.">
     <meta name="twitter:image" content="https://gurugharestate.com/assets/gurgarestates-logo.png">
     
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -425,7 +425,7 @@
     <!-- Page Title Hero -->
     <section class="page-hero">
         <div class="page-hero-content">
-            <h1>About <span>Guru Ghar Estate</span></h1>
+            <h1>About <span>GuruGhar Estate</span></h1>
             <p>Pushing horizons of possibilities by turning your dream house into a reality with our passionate, experienced, and dedicated team.</p>
         </div>
     </section>
@@ -439,8 +439,8 @@
                 <h2 class="section-title">Architects of <span>Luxurious Living</span></h2>
                 <div class="about-title-underline"></div>
                 
-                <p><strong>Guru Ghar Estate</strong> is one of the fastest-growing construction and real estate consultancy companies in Faridabad and the Delhi NCR region. Stitched together by brilliant minds with clear business values, we build on the foundations of trust, quality, and structural excellence.</p>
-                <p>With more than 10 years of diverse, hands-on industry experience, Guru Ghar Estate delivers exceptionally spacious residential units, custom European-style elevations, and bulletproof project timelines. We design masterworks that are rich in modern premium aesthetics and durable for generations.</p>
+                <p><strong>GuruGhar Estate</strong> is one of the fastest-growing construction and real estate consultancy companies in Faridabad and the Delhi NCR region. Stitched together by brilliant minds with clear business values, we build on the foundations of trust, quality, and structural excellence.</p>
+                <p>With more than 10 years of diverse, hands-on industry experience, GuruGhar Estate delivers exceptionally spacious residential units, custom European-style elevations, and bulletproof project timelines. We design masterworks that are rich in modern premium aesthetics and durable for generations.</p>
                 <p>The vast industry experience and oversight of our founders, <strong>Sandeep Goel</strong> and <strong>Pravesh Goel</strong>, ensure our material choices, team Alignments, and finishings represent global benchmarks. We work consistently to materialize client dreams into lifetime sanctuaries.</p>
             </div>
             
@@ -449,7 +449,7 @@
                     <!-- Golden offset frame -->
                     <div class="about-portrait-gold-frame"></div>
                     <!-- Main page jpeg image asset -->
-                    <img src="assets/about-us.jpeg?v=<?= time() ?>" alt="Guru Ghar Estate Premium Real Estate Architecture" class="about-portrait-img">
+                    <img src="assets/about-us.jpeg?v=<?= time() ?>" alt="GuruGhar Estate Premium Real Estate Architecture" class="about-portrait-img">
                 </div>
             </div>
             
@@ -479,7 +479,7 @@
                 <h3>Our <span>Mission</span></h3>
                 <div class="vm-title-underline"></div>
                 
-                <p>Guru Ghar Estate is working on a mission of establishing an atmosphere of trust, clear transparency, and zero-compromise professionalism inside the regional real estate market.</p>
+                <p>GuruGhar Estate is working on a mission of establishing an atmosphere of trust, clear transparency, and zero-compromise professionalism inside the regional real estate market.</p>
                 
                 <ul class="vm-list">
                     <li><i class="fa-solid fa-circle-check"></i> <span>Exceed the limits of client expectations with every residential floor layout delivered.</span></li>

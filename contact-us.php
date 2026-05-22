@@ -7,23 +7,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Guru Ghar Estate</title>
-    <meta name="description" content="Get in touch with Guru Ghar Estate. Contact our premier real estate consultancy and builder floor development team in Faridabad and Delhi NCR.">
-    <meta name="keywords" content="Guru Ghar Estate, Contact Guru Ghar Estate, Real Estate Office Faridabad, Property Consultancy Office, Contact Real Estate Agents">
+    <title>Contact Us | GuruGhar Estate</title>
+    <meta name="description" content="Get in touch with GuruGhar Estate. Contact our premier real estate consultancy and builder floor development team in Faridabad and Delhi NCR.">
+    <meta name="keywords" content="GuruGhar Estate, Contact GuruGhar Estate, Real Estate Office Faridabad, Property Consultancy Office, Contact Real Estate Agents">
     <link rel="icon" href="assets/favicon.png?v=<?= time() ?>" type="image/png">
 
     <!-- Open Graph / Facebook SEO -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://gurugharestate.com/contact-us.php">
-    <meta property="og:title" content="Contact Us | Guru Ghar Estate">
-    <meta property="og:description" content="Get in touch with Guru Ghar Estate. Contact our premier real estate consultancy and builder floor development team in Faridabad and Delhi NCR.">
+    <meta property="og:title" content="Contact Us | GuruGhar Estate">
+    <meta property="og:description" content="Get in touch with GuruGhar Estate. Contact our premier real estate consultancy and builder floor development team in Faridabad and Delhi NCR.">
     <meta property="og:image" content="https://gurugharestate.com/assets/gurgarestates-logo.png">
 
     <!-- Twitter Card SEO -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://gurugharestate.com/contact-us.php">
-    <meta name="twitter:title" content="Contact Us | Guru Ghar Estate">
-    <meta name="twitter:description" content="Get in touch with Guru Ghar Estate. Contact our premier real estate consultancy and builder floor development team in Faridabad and Delhi NCR.">
+    <meta name="twitter:title" content="Contact Us | GuruGhar Estate">
+    <meta name="twitter:description" content="Get in touch with GuruGhar Estate. Contact our premier real estate consultancy and builder floor development team in Faridabad and Delhi NCR.">
     <meta name="twitter:image" content="https://gurugharestate.com/assets/gurgarestates-logo.png">
     
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">

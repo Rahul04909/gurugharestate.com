@@ -12,7 +12,7 @@
         <div class="p-map-content">
             <div class="p-map-badge">ELITE NCR ADDRESSES</div>
             
-            <h2>Presence of <br><span class="gold-text">Guru Ghar Estate</span></h2>
+            <h2>Presence of <br><span class="gold-text">GuruGhar Estate</span></h2>
             <div class="p-map-title-underline"></div>
             
             <p class="p-map-description">We build luxury architectural masterworks in India's most highly-sought residential neighborhoods. Explore our active premier hubs across Delhi NCR, meticulously designed for multi-generational elegance.</p>
@@ -67,7 +67,7 @@
         <!-- Right Side: Interactive Map Visual -->
         <div class="p-map-visual">
             <div class="map-wrapper">
-                <img src="assets/delhi-ncr-map.jpg?v=<?= time() ?>" alt="Guru Ghar Estate Presence Map" class="main-map-img">
+                <img src="assets/delhi-ncr-map.jpg?v=<?= time() ?>" alt="GuruGhar Estate Presence Map" class="main-map-img">
             </div>
 
             <!-- Glassmorphic Tooltip Card displaying Active Location Details -->

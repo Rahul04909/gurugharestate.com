@@ -37,12 +37,12 @@ if (file_exists(__DIR__ . '/../database/config.php')) {
 {
   "@context": "https://schema.org",
   "@type": "RealEstateAgent",
-  "name": "Guru Ghar Estate",
-  "alternateName": "Guru Ghar Estate",
+  "name": "GuruGhar Estate",
+  "alternateName": "GuruGhar Estate",
   "url": "https://gurugharestate.com",
   "logo": "https://gurugharestate.com/assets/gurgarestates-logo.png",
   "image": "https://gurugharestate.com/assets/gurgarestates-logo.png",
-  "description": "Guru Ghar Estate is a premier real estate construction and consultancy company in Faridabad, Delhi NCR, delivering high-quality residential homes and premium builder floors.",
+  "description": "GuruGhar Estate is a premier real estate construction and consultancy company in Faridabad, Delhi NCR, delivering high-quality residential homes and premium builder floors.",
   "telephone": "+91-8851404063",
   "email": "gurugharestates@gmail.com",
   "address": {
@@ -106,7 +106,7 @@ if (file_exists(__DIR__ . '/../database/config.php')) {
             <!-- Static Left Logo -->
             <div class="logo-container" id="logo-container">
                 <a href="index.php">
-                    <img src="assets/gurgarestates-logo.png?v=<?= time() ?>" alt="Guru Ghar Estates Logo" id="logo-image" onerror="this.onerror=null; this.src='assets/gurgarestates-logo.png';">
+                    <img src="assets/gurgarestates-logo.png?v=<?= time() ?>" alt="GuruGhar Estates Logo" id="logo-image" onerror="this.onerror=null; this.src='assets/gurgarestates-logo.png';">
                 </a>
             </div>
 
@@ -157,7 +157,7 @@ if (file_exists(__DIR__ . '/../database/config.php')) {
 <div class="mobile-nav" id="mobile-nav">
     <div class="mobile-nav-header">
         <div class="mobile-logo">
-            <img src="assets/gurgarestates-logo.png?v=<?= time() ?>" alt="Guru Ghar Estates Logo" onerror="this.onerror=null; this.src='assets/gurgarestates-logo.png';">
+            <img src="assets/gurgarestates-logo.png?v=<?= time() ?>" alt="GuruGhar Estates Logo" onerror="this.onerror=null; this.src='assets/gurgarestates-logo.png';">
         </div>
         <div class="mobile-nav-close" id="mobile-nav-close">
             <i class="fa-solid fa-xmark"></i>

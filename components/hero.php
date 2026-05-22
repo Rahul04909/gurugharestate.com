@@ -11,17 +11,17 @@
 
         <!-- Slide 1 -->
         <div class="swiper-slide">
-          <img src="assets/hero/gg-banner-1.png" alt="Guru Ghar Estate Banner">
+          <img src="assets/hero/gg-banner-1.png" alt="GuruGhar Estate Banner">
         </div>
 
         <!-- Slide 2 -->
         <div class="swiper-slide">
-          <img src="assets/hero/gg-banner-2.png" alt="Guru Ghar Estate Banner">
+          <img src="assets/hero/gg-banner-2.png" alt="GuruGhar Estate Banner">
         </div>
 
         <!-- Slide 3 -->
         <div class="swiper-slide">
-          <img src="assets/hero/gg-banner-3.png" alt="Guru Ghar Estate Banner">
+          <img src="assets/hero/gg-banner-3.png" alt="GuruGhar Estate Banner">
         </div>
 
       </div>

@@ -17,7 +17,7 @@
                     <!-- Golden Luxury Offset Shadow Block -->
                     <div class="spec-portrait-gold-frame"></div>
                     <!-- Main WebP Collaborative Design Image -->
-                    <img src="assets/contstant-discussion-continious-improvement.webp?v=<?= time() ?>" alt="Constant Discussion and Continuous Improvement - Guru Ghar Estate" class="spec-portrait-img">
+                    <img src="assets/contstant-discussion-continious-improvement.webp?v=<?= time() ?>" alt="Constant Discussion and Continuous Improvement - GuruGhar Estate" class="spec-portrait-img">
                     
                     <!-- Overlaid Glassmorphic Site Badge -->
                     <div class="spec-site-badge">
@@ -33,7 +33,7 @@
                 <h2>Constant Discussion & <br><span class="gold-text">Continuous Improvement</span></h2>
                 <div class="spec-title-underline"></div>
                 
-                <p class="spec-intro">At <strong>Guru Ghar Estate</strong>, structural superiority is never an accident—it is the direct result of rigorous, daily on-site collaboration. By engaging in constant team discussions, evaluating micro-details, and driving a culture of continuous improvement, our architects, builders, and structural engineers ensure every brick laid exceeds global benchmarks.</p>
+                <p class="spec-intro">At <strong>GuruGhar Estate</strong>, structural superiority is never an accident—it is the direct result of rigorous, daily on-site collaboration. By engaging in constant team discussions, evaluating micro-details, and driving a culture of continuous improvement, our architects, builders, and structural engineers ensure every brick laid exceeds global benchmarks.</p>
                 
                 <!-- Core Collaborative Pillars -->
                 <ul class="spec-pillars">
@@ -76,7 +76,7 @@
                 <!-- Table Header Grid Row -->
                 <div class="spec-row spec-header-row">
                     <div class="spec-col col-category">Architectural Component</div>
-                    <div class="spec-col col-detail">Guru Ghar Elite Building Standards</div>
+                    <div class="spec-col col-detail">GuruGhar Elite Building Standards</div>
                 </div>
 
                 <!-- Row 1: Structural Engineering -->

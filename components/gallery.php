@@ -394,7 +394,7 @@ if ($res && $res->num_rows > 0) {
                     <div class="gallery-card" onclick="openLightbox(<?= $index ?>)" role="button" aria-label="Open image in full view">
                         <div class="gallery-img-wrapper">
                             <img src="assets/uploads/gallery/<?= htmlspecialchars($item['image_name']) ?>" 
-                                 alt="<?= htmlspecialchars($item['title'] ?: 'Guru Ghar Estate Premium Work') ?>" 
+                                 alt="<?= htmlspecialchars($item['title'] ?: 'GuruGhar Estate Premium Work') ?>" 
                                  loading="lazy">
                             <div class="gallery-overlay">
                                 <div class="gallery-overlay-icon"><i class="fa-solid fa-expand"></i></div>
@@ -409,7 +409,7 @@ if ($res && $res->num_rows > 0) {
                 <!-- Curated fallback high-quality imagery to maintain stunning layout even if table is empty -->
                 <div class="gallery-card" onclick="openLightbox(0)">
                     <div class="gallery-img-wrapper">
-                        <img src="assets/front-about.png" alt="Guru Ghar Premium Elevation" loading="lazy">
+                        <img src="assets/front-about.png" alt="GuruGhar Premium Elevation" loading="lazy">
                         <div class="gallery-overlay">
                             <div class="gallery-overlay-icon"><i class="fa-solid fa-expand"></i></div>
                             <h4 class="gallery-item-title">Premium Front Elevation</h4>
@@ -418,7 +418,7 @@ if ($res && $res->num_rows > 0) {
                 </div>
                 <div class="gallery-card" onclick="openLightbox(1)">
                     <div class="gallery-img-wrapper">
-                        <img src="assets/front-about.png" alt="Guru Ghar Luxury Interior" loading="lazy">
+                        <img src="assets/front-about.png" alt="GuruGhar Luxury Interior" loading="lazy">
                         <div class="gallery-overlay">
                             <div class="gallery-overlay-icon"><i class="fa-solid fa-expand"></i></div>
                             <h4 class="gallery-item-title">Exquisite Modern Interior</h4>
@@ -427,7 +427,7 @@ if ($res && $res->num_rows > 0) {
                 </div>
                 <div class="gallery-card" onclick="openLightbox(2)">
                     <div class="gallery-img-wrapper">
-                        <img src="assets/front-about.png" alt="Guru Ghar Contemporary Building" loading="lazy">
+                        <img src="assets/front-about.png" alt="GuruGhar Contemporary Building" loading="lazy">
                         <div class="gallery-overlay">
                             <div class="gallery-overlay-icon"><i class="fa-solid fa-expand"></i></div>
                             <h4 class="gallery-item-title">Luxury Builder Floor Exterior</h4>
@@ -458,7 +458,7 @@ const galleryImages = [
         <?php foreach ($gallery_items as $item): ?>
             {
                 src: "assets/uploads/gallery/<?= htmlspecialchars($item['image_name']) ?>",
-                title: "<?= htmlspecialchars($item['title'] ?: 'Guru Ghar Estate Masterpiece') ?>"
+                title: "<?= htmlspecialchars($item['title'] ?: 'GuruGhar Estate Masterpiece') ?>"
             },
         <?php endforeach; ?>
     <?php else: ?>

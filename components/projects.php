@@ -40,9 +40,9 @@ $projects = $stmt->get_result();
                                 <?php if(!empty($row['seo_featured_image'])): ?>
                                     <img src="assets/uploads/projects/<?= htmlspecialchars($row['seo_featured_image']) ?>" alt="<?= htmlspecialchars($row['title']) ?>">
                                 <?php else: ?>
-                                    <img src="assets/front-about.png" alt="Guru Ghar Estate Premium Residence" class="placeholder-img">
+                                    <img src="assets/front-about.png" alt="GuruGhar Estate Premium Residence" class="placeholder-img">
                                     <div class="placeholder-overlay">
-                                        <img src="assets/gurgarestates-logo.png" alt="Guru Ghar Estate Logo" class="overlay-logo">
+                                        <img src="assets/gurgarestates-logo.png" alt="GuruGhar Estate Logo" class="overlay-logo">
                                     </div>
                                 <?php endif; ?>
                             </div>

@@ -41,10 +41,10 @@ if (isset($conn)) {
             <!-- Col 1: Branding & Profile -->
             <div class="footer-col branding-col">
                 <div class="footer-brand-wrap">
-                    <img src="assets/gurgarestates-logo.png?v=<?= time() ?>" alt="Guru Ghar Estate" class="footer-logo" onerror="this.onerror=null; this.src='assets/gurgarestates-logo.png';">
+                    <img src="assets/gurgarestates-logo.png?v=<?= time() ?>" alt="GuruGhar Estate" class="footer-logo" onerror="this.onerror=null; this.src='assets/gurgarestates-logo.png';">
                 </div>
                 <p class="tagline">Building Dreams, Delivering Luxury</p>
-                <p class="desc">Experience the absolute pinnacle of sophisticated living tailored to your expectations. Guru Ghar Estate delivers premium, bespoke residential builder floors across Faridabad and the Delhi NCR region.</p>
+                <p class="desc">Experience the absolute pinnacle of sophisticated living tailored to your expectations. GuruGhar Estate delivers premium, bespoke residential builder floors across Faridabad and the Delhi NCR region.</p>
 
                 <!-- High-End Tactile Social Widgets -->
                 <div class="social-icons-wrapper">
@@ -107,7 +107,7 @@ if (isset($conn)) {
                     <li>
                         <i class="fa-solid fa-location-dot"></i>
                         <div class="contact-info-block text-block">
-                            <strong>Guru Ghar Estate</strong><br>
+                            <strong>GuruGhar Estate</strong><br>
                             JC-21, Ground Floor, Sector - 81, Puri VIP Floors.<br>
                             Haryana 121007
                         </div>
@@ -131,7 +131,7 @@ if (isset($conn)) {
     <!-- Bottom Strip -->
     <div class="footer-bottom">
         <div class="footer-bottom-container">
-            <p class="copyright-text">&copy; <?php echo date('Y'); ?> Guru Ghar Estate | All rights reserved.</p>
+            <p class="copyright-text">&copy; <?php echo date('Y'); ?> GuruGhar Estate | All rights reserved.</p>
             <p class="mineib-credit">
                 Website Powered by
                 <a href="https://www.mineib.com" target="_blank" class="mineib-link">
