@@ -15,7 +15,7 @@
             <div class="about-image-wrapper">
                 <img src="assets/front-about.png?v=<?= time() ?>" alt="GuruGhar Estate Premium Builder Floors" class="about-single-img">
                 <div class="about-image-card">
-                    <span class="card-number">10+</span>
+                    <span class="card-number">23+</span>
                     <span class="card-text">Years of Excellence</span>
                 </div>
             </div>
