@@ -20,6 +20,9 @@ if ($res && $res->num_rows > 0) {
 ?>
 <!-- components/gallery.php -->
 <style>
+/* Import Premium Playfair Display Serif Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
 /* Modern Premium Gallery Component Stylesheet */
 .gallery-section {
     padding: 80px 0;
@@ -63,14 +66,18 @@ if ($res && $res->num_rows > 0) {
 }
 
 .gallery-header h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 2.8rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
     margin-bottom: 16px;
     color: #ffffff;
-    font-family: 'Outfit', 'Source Sans Pro', sans-serif;
 }
 
 .gallery-header h2 .gold-text {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
     color: #d4af37;
 }
 
