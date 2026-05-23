@@ -440,8 +440,8 @@
                 <div class="about-title-underline"></div>
                 
                 <p><strong>GuruGhar Estate</strong> is one of the fastest-growing construction and real estate consultancy companies in Faridabad and the Delhi NCR region. Stitched together by brilliant minds with clear business values, we build on the foundations of trust, quality, and structural excellence.</p>
-                <p>With more than 10 years of diverse, hands-on industry experience, GuruGhar Estate delivers exceptionally spacious residential units, custom European-style elevations, and bulletproof project timelines. We design masterworks that are rich in modern premium aesthetics and durable for generations.</p>
-                <p>The vast industry experience and oversight of our founders, <strong>Sandeep Goel</strong> and <strong>Pravesh Goel</strong>, ensure our material choices, team Alignments, and finishings represent global benchmarks. We work consistently to materialize client dreams into lifetime sanctuaries.</p>
+                <p>With more than 23 years of diverse, hands-on industry experience, GuruGhar Estate delivers exceptionally spacious residential units, custom European-style elevations, and bulletproof project timelines. We design masterworks that are rich in modern premium aesthetics and durable for generations.</p>
+                <p>The vast industry experience and oversight of our founder, <strong>Mr. Rakesh Batra</strong>, ensure our material choices, team Alignments, and finishings represent global benchmarks. We work consistently to materialize client dreams into lifetime sanctuaries.</p>
             </div>
             
             <div class="about-image">
@@ -449,7 +449,7 @@
                     <!-- Golden offset frame -->
                     <div class="about-portrait-gold-frame"></div>
                     <!-- Main page jpeg image asset -->
-                    <img src="assets/about-us.jpeg?v=<?= time() ?>" alt="GuruGhar Estate Premium Real Estate Architecture" class="about-portrait-img">
+                    <img src="assets/front-about.png?v=<?= time() ?>" alt="GuruGhar Estate Premium Real Estate Architecture" class="about-portrait-img">
                 </div>
             </div>
             
