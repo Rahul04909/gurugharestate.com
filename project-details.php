@@ -547,18 +547,24 @@ $seo_featured = htmlspecialchars($project['seo_featured_image']);
                 $enq_msg = '';
                 if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit_enquiry'])) {
                     require_once 'database/config.php';
-                    $name = mysqli_real_escape_string($conn, $_POST['name']);
-                    $email = mysqli_real_escape_string($conn, $_POST['email']);
-                    $phone = mysqli_real_escape_string($conn, $_POST['phone']);
-                    $message = isset($_POST['message']) ? mysqli_real_escape_string($conn, $_POST['message']) : '';
+                    $name = mysqli_real_escape_string($conn, trim($_POST['name']));
+                    $email = mysqli_real_escape_string($conn, trim($_POST['email']));
+                    $phone = mysqli_real_escape_string($conn, trim($_POST['phone']));
+                    $message = isset($_POST['message']) ? mysqli_real_escape_string($conn, trim($_POST['message'])) : '';
                     $source = "Project Inquiry: " . mysqli_real_escape_string($conn, $title);
                     
-                    $sql = "INSERT INTO enquiries (name, email, phone, message, source) VALUES ('$name', '$email', '$phone', '$message', '$source')";
-                    
-                    if(mysqli_query($conn, $sql)) {
-                        $enq_msg = "<div style='color:#28a745; background:rgba(40,167,69,0.1); padding:10px; border-radius:5px; margin-bottom:15px; font-weight:bold; font-size:13px; border-left:4px solid #28a745;'>Thank you! Your enquiry has been completely received. Our team will contact you.</div>";
+                    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                        $enq_msg = "<div style='color:#dc3545; background:rgba(220,53,69,0.1); padding:10px; border-radius:5px; margin-bottom:15px; font-weight:bold; font-size:13px; border-left:4px solid #dc3545;'>Please enter a valid email address.</div>";
+                    } elseif (!preg_match('/^[0-9]{10}$/', $phone)) {
+                        $enq_msg = "<div style='color:#dc3545; background:rgba(220,53,69,0.1); padding:10px; border-radius:5px; margin-bottom:15px; font-weight:bold; font-size:13px; border-left:4px solid #dc3545;'>Mobile number must be exactly 10 digits.</div>";
                     } else {
-                        $enq_msg = "<div style='color:#dc3545; background:rgba(220,53,69,0.1); padding:10px; border-radius:5px; margin-bottom:15px; font-weight:bold; font-size:13px; border-left:4px solid #dc3545;'>Error submitting enquiry. Please try again.</div>";
+                        $sql = "INSERT INTO enquiries (name, email, phone, message, source) VALUES ('$name', '$email', '$phone', '$message', '$source')";
+                        
+                        if(mysqli_query($conn, $sql)) {
+                            $enq_msg = "<div style='color:#28a745; background:rgba(40,167,69,0.1); padding:10px; border-radius:5px; margin-bottom:15px; font-weight:bold; font-size:13px; border-left:4px solid #28a745;'>Thank you! Your enquiry has been completely received. Our team will contact you.</div>";
+                        } else {
+                            $enq_msg = "<div style='color:#dc3545; background:rgba(220,53,69,0.1); padding:10px; border-radius:5px; margin-bottom:15px; font-weight:bold; font-size:13px; border-left:4px solid #dc3545;'>Error submitting enquiry. Please try again.</div>";
+                        }
                     }
                 }
                 ?>
@@ -576,14 +582,14 @@ $seo_featured = htmlspecialchars($project['seo_featured_image']);
                         <label>Email Address</label>
                         <div class="input-icon-wrapper">
                             <i class="fa-solid fa-envelope"></i>
-                            <input type="email" name="email" placeholder="Enter your email" autocomplete="email" required>
+                            <input type="email" name="email" placeholder="Enter your email" autocomplete="email" required pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" title="Please enter a valid email address">
                         </div>
                     </div>
                     <div class="form-group-custom">
                         <label>Phone Number</label>
                         <div class="input-icon-wrapper">
                             <i class="fa-solid fa-phone"></i>
-                            <input type="tel" name="phone" placeholder="Enter your phone" autocomplete="tel" required>
+                            <input type="tel" name="phone" placeholder="Enter your phone" autocomplete="tel" required pattern="[0-9]{10}" maxlength="10" title="Please enter exactly 10 digits for your mobile number" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10);">
                         </div>
                     </div>
                     <div class="form-group-custom">

@@ -647,18 +647,24 @@
                 $msg = '';
                 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit_contact'])) {
                     require_once 'database/config.php';
-                    $name = mysqli_real_escape_string($conn, $_POST['name']);
-                    $email = mysqli_real_escape_string($conn, $_POST['email']);
-                    $phone = mysqli_real_escape_string($conn, $_POST['phone']);
-                    $message = isset($_POST['message']) ? mysqli_real_escape_string($conn, $_POST['message']) : '';
+                    $name = mysqli_real_escape_string($conn, trim($_POST['name']));
+                    $email = mysqli_real_escape_string($conn, trim($_POST['email']));
+                    $phone = mysqli_real_escape_string($conn, trim($_POST['phone']));
+                    $message = isset($_POST['message']) ? mysqli_real_escape_string($conn, trim($_POST['message'])) : '';
                     $source = "Contact Us Page";
                     
-                    $sql = "INSERT INTO enquiries (name, email, phone, message, source) VALUES ('$name', '$email', '$phone', '$message', '$source')";
-                    
-                    if (mysqli_query($conn, $sql)) {
-                        $msg = "<div class='alert alert-success'><i class='fa-solid fa-circle-check'></i> Your message has been successfully sent! Our team will contact you soon.</div>";
+                    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                        $msg = "<div class='alert alert-danger'><i class='fa-solid fa-circle-exclamation'></i> Please enter a valid email address.</div>";
+                    } elseif (!preg_match('/^[0-9]{10}$/', $phone)) {
+                        $msg = "<div class='alert alert-danger'><i class='fa-solid fa-circle-exclamation'></i> Mobile number must be exactly 10 digits.</div>";
                     } else {
-                        $msg = "<div class='alert alert-danger'><i class='fa-solid fa-circle-exclamation'></i> Error submitting message. Please try again.</div>";
+                        $sql = "INSERT INTO enquiries (name, email, phone, message, source) VALUES ('$name', '$email', '$phone', '$message', '$source')";
+                        
+                        if (mysqli_query($conn, $sql)) {
+                            $msg = "<div class='alert alert-success'><i class='fa-solid fa-circle-check'></i> Your message has been successfully sent! Our team will contact you soon.</div>";
+                        } else {
+                            $msg = "<div class='alert alert-danger'><i class='fa-solid fa-circle-exclamation'></i> Error submitting message. Please try again.</div>";
+                        }
                     }
                 }
                 ?>
@@ -671,11 +677,11 @@
                     </div>
                     <div class="form-group-custom">
                         <label for="form-email">Email Address *</label>
-                        <input type="email" id="form-email" name="email" placeholder="Enter your email address" autocomplete="email" required>
+                        <input type="email" id="form-email" name="email" placeholder="Enter your email address" autocomplete="email" required pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" title="Please enter a valid email address">
                     </div>
                     <div class="form-group-custom">
                         <label for="form-phone">Phone Number *</label>
-                        <input type="tel" id="form-phone" name="phone" placeholder="Enter your mobile number" autocomplete="tel" required>
+                        <input type="tel" id="form-phone" name="phone" placeholder="Enter your mobile number" autocomplete="tel" required pattern="[0-9]{10}" maxlength="10" title="Please enter exactly 10 digits for your mobile number" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10);">
                     </div>
                     <div class="form-group-custom">
                         <label for="form-message">Message / Inquiry (Optional)</label>
