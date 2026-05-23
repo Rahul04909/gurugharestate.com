@@ -63,6 +63,7 @@
 
         </div>
 
+        <?php /*
         <!-- Part B: Premium Technical Specifications Table Grid -->
         <div class="spec-table-section">
             <div class="spec-table-header">
@@ -147,6 +148,7 @@
 
             </div>
         </div>
+        */ ?>
 
     </div>
 </section>
