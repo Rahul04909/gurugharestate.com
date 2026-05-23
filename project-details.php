@@ -76,25 +76,35 @@ $seo_featured = htmlspecialchars($project['seo_featured_image']);
         
         .project-hero { 
             position: relative; 
-            height: 65vh; 
-            background: #111; 
+            width: 100%;
+            background: #ffffff; 
             overflow: hidden; 
-            margin-top: 80px; 
+            margin-top: 158px; 
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        @media screen and (max-width: 1050px) {
+            .project-hero { margin-top: 100px; }
+        }
+        @media screen and (max-width: 768px) {
+            .project-hero { margin-top: 80px; }
         }
         .project-hero .swiper { 
             width: 100%; 
-            height: 100%; 
+            height: auto; 
+        }
+        .project-hero .swiper-slide {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: auto;
         }
         .project-hero .swiper-slide img { 
+            position: relative;
             width: 100%; 
-            height: 100%; 
-            object-fit: cover; 
-            opacity: 0.95; 
-            transition: transform 8s ease;
-        }
-        .project-hero .swiper-slide-active img {
-            transform: scale(1.05);
+            height: auto; 
+            display: block;
+            opacity: 1; 
+            z-index: 1;
         }
         
         /* Swiper custom pagination styles */
