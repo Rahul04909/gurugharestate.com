@@ -140,9 +140,9 @@ if (file_exists(__DIR__ . '/../database/config.php')) {
 
         <!-- Right Side CTA Actions -->
         <div class="header-buttons" id="header-buttons">
-            <a href="tel:+918851404063" class="btn btn-outline" title="Call Us Now">
+            <a href="tel:+919999566126" class="btn btn-outline" title="Call Us Now">
                 <i class="fa-solid fa-phone"></i>
-                <span class="phone-number-text">+91 88514 04063</span>
+                <span class="phone-number-text">+91 99995 66126</span>
             </a>
             <button id="enquireBtn" class="btn btn-primary">Enquire Now</button>
         </div>

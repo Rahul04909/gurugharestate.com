@@ -10,7 +10,7 @@
                 <!-- Golden Offset Background Frame Block -->
                 <div class="portrait-gold-frame"></div>
                 <!-- Main Portrait Image -->
-                <img src="assets/rakesh-batra.webp" alt="Rakesh Batra - Founder of GuruGhar Estate" class="portrait-img">
+                <img src="assets/rakesh-ji.jpeg" alt="Rakesh Batra - Founder of GuruGhar Estate" class="portrait-img">
                 
                 <!-- Overlaid Founder Title Nameplate -->
                 <div class="founder-badge">
