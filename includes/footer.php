@@ -95,6 +95,7 @@ if (isset($conn)) {
                         <div class="contact-info-block">
                             <a href="tel:+918851404063">+91 88514 04063</a>
                             <a href="tel:+919999566126">+91 99995 66126</a>
+                            <a href="tel:+917827771777">+91 78277 1777</a>
                         </div>
                     </li>
                     <li>

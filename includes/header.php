@@ -102,6 +102,8 @@ if (file_exists(__DIR__ . '/../database/config.php')) {
                 <span class="top-bar-tag"><i class="fa-solid fa-phone"></i> <a href="tel:+918851404063">+91-8851404063</a></span>
                 <span class="divider">|</span>
                 <span class="top-bar-tag"><i class="fa-solid fa-phone"></i> <a href="tel:+919999566126">+91-9999566126</a></span>
+                <span class="divider">|</span>
+                <span class="top-bar-tag"><i class="fa-solid fa-phone"></i> <a href="tel:+917827771777">+91-782771777</a></
             </div>
         </div>
     </div>
