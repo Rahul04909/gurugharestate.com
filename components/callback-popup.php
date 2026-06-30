@@ -16,10 +16,7 @@
         </div>
 
         <!-- Alert Notification Panel -->
-        <div id="callbackAlert" class="callback-alert">
-            <i id="callbackAlertIcon" class="fa-solid"></i>
-            <span id="callbackAlertText"></span>
-        </div>
+        <div id="callbackAlert" class="callback-alert"></div>
 
         <!-- Submission Form -->
         <form id="callbackForm" class="callback-form" novalidate>
@@ -28,7 +25,8 @@
                 <label for="cbName">Full Name *</label>
                 <div class="callback-input-wrapper">
                     <i class="fa-solid fa-user callback-input-icon"></i>
-                    <input type="text" id="cbName" name="name" class="callback-input-field" placeholder="Enter your full name" autocomplete="name" required>
+                    <input type="text" id="cbName" name="name" class="callback-input-field"
+                           placeholder="Enter your full name" autocomplete="name" required>
                 </div>
             </div>
 
@@ -48,7 +46,8 @@
                         </div>
                         <span class="phone-prefix-text">+91</span>
                     </div>
-                    <input type="tel" id="cbPhone" name="phone" class="callback-input-field callback-phone-field" placeholder="81234 56789" autocomplete="tel" required maxlength="10">
+                    <input type="tel" id="cbPhone" name="phone" class="callback-input-field callback-phone-field"
+                           placeholder="81234 56789" autocomplete="tel" required maxlength="10">
                 </div>
             </div>
 
@@ -67,11 +66,11 @@
             <div class="callback-links-block">
                 <div class="callback-link-row">
                     <span>Have a custom requirement?</span>
-                    <a href="contact-us.php" id="cbWriteToUs">Write to us</a>
+                    <a href="contact-us.php">Write to us</a>
                 </div>
                 <div class="callback-link-row">
                     <span>In a hurry? Call us now</span>
-                    <a href="tel:+919999566126" id="cbCallNow">+91 99995 66126</a>
+                    <a href="tel:+919999566126">+91 99995 66126</a>
                 </div>
                 <p class="callback-hint-text">*Please enter your 10-digit mobile number.</p>
             </div>
@@ -80,129 +79,132 @@
 </div>
 
 <script>
-$(document).ready(function() {
-    const $overlay = $('#callbackModalOverlay');
-    const $closeBtn = $('#callbackCloseBtn');
-    const $form = $('#callbackForm');
-    const $alert = $('#callbackAlert');
-    const $alertIcon = $('#callbackAlertIcon');
-    const $alertText = $('#callbackAlertText');
-    const $submitBtn = $('#callbackSubmitBtn');
-    
-    const STORAGE_KEY = 'gurughar_callback_popup_dismissed';
-    const POPUP_DELAY_MS = 5000; // 5 seconds delay
+(function () {
+    'use strict';
 
-    // Allow digits only for phone number field
-    $('#cbPhone').on('input', function() {
+    var STORAGE_KEY  = 'gurughar_callback_popup_dismissed';
+    var POPUP_DELAY  = 5000; // 5 seconds
+
+    var overlay    = document.getElementById('callbackModalOverlay');
+    var closeBtn   = document.getElementById('callbackCloseBtn');
+    var form       = document.getElementById('callbackForm');
+    var alertBox   = document.getElementById('callbackAlert');
+    var phoneInput = document.getElementById('cbPhone');
+    var submitBtn  = document.getElementById('callbackSubmitBtn');
+
+    /* ── Digits-only for phone ── */
+    phoneInput.addEventListener('input', function () {
         this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10);
     });
 
-    // Check if popup should be shown
-    function checkAndShowPopup() {
-        const dismissedTime = localStorage.getItem(STORAGE_KEY);
-        const currentTime = new Date().getTime();
-        
-        // Show if not dismissed, or if 24 hours have passed since last dismissal (24 * 60 * 60 * 1000 = 86400000 ms)
-        if (!dismissedTime || (currentTime - parseInt(dismissedTime) > 86400000)) {
-            setTimeout(function() {
-                // Ensure no other modal is currently active on load before opening
-                if (!$('.header-modal').hasClass('show')) {
-                    $overlay.addClass('show');
-                    $('body').css('overflow', 'hidden');
-                }
-            }, POPUP_DELAY_MS);
+    /* ── Show / hide popup ── */
+    function openPopup() {
+        overlay.classList.add('show');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closePopup(dismiss) {
+        overlay.classList.remove('show');
+        document.body.style.overflow = '';
+        if (dismiss) {
+            localStorage.setItem(STORAGE_KEY, Date.now().toString());
         }
     }
 
-    // Close and dismiss logic
-    function closePopup(permanent = false) {
-        $overlay.removeClass('show');
-        $('body').css('overflow', '');
-        
-        if (permanent) {
-            localStorage.setItem(STORAGE_KEY, new Date().getTime().toString());
-        }
+    /* ── Alert helper ── */
+    function showAlert(type, message) {
+        alertBox.className = 'callback-alert callback-alert-' + type;
+        alertBox.innerHTML =
+            '<i class="fa-solid ' + (type === 'success' ? 'fa-circle-check' : 'fa-circle-exclamation') + '"></i> ' +
+            '<span>' + message + '</span>';
+        alertBox.style.display = 'flex';
     }
 
-    // Bind close events
-    $closeBtn.on('click', function() {
-        closePopup(true); // Dismiss for 24 hours
+    function hideAlert() {
+        alertBox.style.display = 'none';
+        alertBox.className = 'callback-alert';
+        alertBox.innerHTML = '';
+    }
+
+    /* ── Close button & overlay click ── */
+    closeBtn.addEventListener('click', function () { closePopup(true); });
+    overlay.addEventListener('click', function (e) {
+        if (e.target === overlay) { closePopup(true); }
     });
 
-    $overlay.on('click', function(e) {
-        if (e.target === this) {
-            closePopup(true); // Dismiss for 24 hours
-        }
-    });
-
-    // Handle AJAX Submission
-    $form.on('submit', function(e) {
+    /* ── Form submission via Fetch API ── */
+    form.addEventListener('submit', function (e) {
         e.preventDefault();
-        
-        // Front-end Validation
-        const name = $.trim($('#cbName').val());
-        const phone = $.trim($('#cbPhone').val());
-        
-        $alert.removeClass('callback-alert-success callback-alert-danger').hide();
+
+        var name  = document.getElementById('cbName').value.trim();
+        var phone = phoneInput.value.trim();
+
+        hideAlert();
 
         if (name.length < 2) {
-            showAlert('danger', 'fa-circle-exclamation', 'Please enter your full name (minimum 2 characters).');
+            showAlert('danger', 'Please enter your full name (minimum 2 characters).');
             return;
         }
-
         if (phone.length !== 10) {
-            showAlert('danger', 'fa-circle-exclamation', 'Please enter exactly 10 digits for your mobile number.');
+            showAlert('danger', 'Please enter exactly 10 digits for your mobile number.');
             return;
         }
 
-        // Disable button to prevent double click
-        $submitBtn.prop('disabled', true).html('<i class="fa-solid fa-spinner fa-spin"></i> Processing...');
+        /* Disable button */
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Processing...';
 
-        // AJAX POST Request
-        $.ajax({
-            url: 'submit-callback.php',
-            type: 'POST',
-            dataType: 'json',
-            data: {
-                name: name,
-                phone: '+91' + phone
-            },
-            success: function(response) {
-                if (response.success) {
-                    showAlert('success', 'fa-circle-check', response.message);
-                    $form.slideUp(300);
-                    
-                    // Permanent dismissal on successful submission
-                    localStorage.setItem(STORAGE_KEY, (new Date().getTime() + 10 * 365 * 24 * 60 * 60 * 1000).toString()); // 10 years expiration
-                    
-                    // Close after 3.5 seconds
-                    setTimeout(function() {
-                        closePopup(false);
-                    }, 3500);
-                } else {
-                    showAlert('danger', 'fa-circle-exclamation', response.message);
-                    $submitBtn.prop('disabled', false).html('<i class="fa-solid fa-phone-volume"></i> Call me back');
-                }
-            },
-            error: function() {
-                showAlert('danger', 'fa-circle-exclamation', 'An error occurred. Please try again.');
-                $submitBtn.prop('disabled', false).html('<i class="fa-solid fa-phone-volume"></i> Call me back');
+        /* Build form data */
+        var formData = new FormData();
+        formData.append('name', name);
+        formData.append('phone', '+91' + phone);
+
+        fetch('submit-callback.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(function (res) { return res.json(); })
+        .then(function (data) {
+            if (data.success) {
+                showAlert('success', data.message);
+                form.style.display = 'none';
+                /* Suppress popup permanently after successful submission */
+                localStorage.setItem(STORAGE_KEY, (Date.now() + 315360000000).toString()); // +10 years
+                setTimeout(function () { closePopup(false); }, 3500);
+            } else {
+                showAlert('danger', data.message || 'Something went wrong. Please try again.');
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="fa-solid fa-phone-volume"></i> Call me back';
             }
+        })
+        .catch(function () {
+            showAlert('danger', 'An error occurred. Please try again.');
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = '<i class="fa-solid fa-phone-volume"></i> Call me back';
         });
     });
 
-    function showAlert(type, iconClass, message) {
-        $alert.removeClass('callback-alert-success callback-alert-danger');
-        $alertIcon.removeClass();
-        
-        $alert.addClass('callback-alert-' + type);
-        $alertIcon.addClass('fa-solid ' + iconClass);
-        $alertText.text(message);
-        
-        $alert.css('display', 'flex').hide().fadeIn(200);
+    /* ── Trigger on load ── */
+    function checkAndShow() {
+        var stored = localStorage.getItem(STORAGE_KEY);
+        var now    = Date.now();
+
+        /* Show if: never dismissed, OR 24 h have passed since last dismissal */
+        if (!stored || (now - parseInt(stored, 10) > 86400000)) {
+            setTimeout(function () {
+                /* Don't open if the Enquire Now header modal is already open */
+                var headerModal = document.getElementById('headerEnquireModal');
+                if (headerModal && headerModal.classList.contains('show')) { return; }
+                openPopup();
+            }, POPUP_DELAY);
+        }
     }
 
-    // Trigger Popup Check
-    checkAndShowPopup();
-});
+    /* Run after the full page has loaded */
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', checkAndShow);
+    } else {
+        checkAndShow();
+    }
+})();
 </script>
