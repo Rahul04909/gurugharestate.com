@@ -56,6 +56,13 @@ $menuItems = [
         "pages" => [
             ["title" => "Manage Enquiries", "url" => $base_url . "enquiries/index.php"]
         ],
+    ],
+    [
+        "menuTitle" => "Callbacks",
+        "icon" => "fas fa-phone-alt",
+        "pages" => [
+            ["title" => "Manage Callbacks", "url" => $base_url . "callbacks/index.php"]
+        ],
     ]
 ];
 

@@ -54,5 +54,8 @@
     <!-- Include Footer -->
     <?php include 'includes/footer.php'; ?>
 
+    <!-- Include Callback Request Popup -->
+    <?php include 'components/callback-popup.php'; ?>
+
 </body>
 </html>

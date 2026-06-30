@@ -1,0 +1,370 @@
+/* ==========================================================================
+   GuruGhar Estate - Callback Popup Stylesheet (Premium & Responsive)
+   ========================================================================== */
+
+/* Font Family Fallback - matches header */
+.callback-modal-overlay {
+    font-family: 'Outfit', 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.callback-modal-overlay * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Modal Overlay Base */
+.callback-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), visibility 0.4s;
+    padding: 20px;
+}
+
+/* Show State */
+.callback-modal-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Modal Card */
+.callback-modal-card {
+    background: #ffffff;
+    width: 100%;
+    max-width: 540px;
+    border-radius: 20px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+    position: relative;
+    padding: 45px 40px;
+    transform: scale(0.8) translateY(-30px);
+    opacity: 0;
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.4s;
+    border-top: 4px solid #d4af37; /* Luxury gold line */
+}
+
+/* Show Card State */
+.callback-modal-overlay.show .callback-modal-card {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+}
+
+/* Close Button */
+.callback-close-btn {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    background: #f1f2f4;
+    border: none;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    color: #4a4a4f;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.callback-close-btn:hover {
+    background-color: #d4af37;
+    color: #ffffff;
+    transform: rotate(90deg);
+}
+
+/* Header Content */
+.callback-header {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.callback-title-small {
+    font-size: 24px;
+    font-weight: 600;
+    color: #302f35; /* Dark Slate */
+    line-height: 1.25;
+    margin-bottom: 4px;
+    letter-spacing: -0.5px;
+}
+
+.callback-title-accent {
+    font-size: 28px;
+    font-weight: 700;
+    color: #d4af37; /* Gold Accent */
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+.callback-subtitle {
+    font-size: 14px;
+    color: #6c6c72;
+    line-height: 1.5;
+}
+
+/* Alert Notification inside popup */
+.callback-alert {
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-size: 13.5px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    display: none;
+    align-items: center;
+    gap: 8px;
+    animation: slideDownIn 0.3s ease-out;
+}
+
+@keyframes slideDownIn {
+    from { transform: translateY(-10px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.callback-alert-success {
+    background: #e2f0d9;
+    color: #155724;
+    border: 1px solid #c5e0b4;
+    border-left: 4px solid #28a745;
+}
+
+.callback-alert-danger {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    border-left: 4px solid #dc3545;
+}
+
+/* Form Styles */
+.callback-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.callback-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.callback-input-group label {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #302f35;
+}
+
+.callback-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.callback-input-icon {
+    position: absolute;
+    left: 15px;
+    color: #8c8f94;
+    font-size: 15px;
+    pointer-events: none;
+}
+
+.callback-input-field {
+    width: 100%;
+    padding: 14px 15px 14px 42px;
+    font-size: 15px;
+    font-family: 'Outfit', sans-serif;
+    color: #302f35;
+    background-color: #fafbfc;
+    border: 1.5px solid #e1e1e6;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.callback-input-field::placeholder {
+    color: #a0a0a5;
+    font-weight: 300;
+}
+
+.callback-input-field:focus {
+    outline: none;
+    border-color: #d4af37;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.15);
+}
+
+/* Phone input container with Indian Flag */
+.phone-prefix-container {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 12px;
+    gap: 8px;
+    pointer-events: none;
+    border-right: 1.5px solid #e1e1e6;
+    padding-right: 10px;
+    height: 60%;
+}
+
+.indian-flag-icon {
+    display: flex;
+    align-items: center;
+    border-radius: 2px;
+    overflow: hidden;
+    border: 0.5px solid rgba(0,0,0,0.1);
+}
+
+.phone-prefix-text {
+    font-size: 14.5px;
+    font-weight: 600;
+    color: #4a4a4f;
+    letter-spacing: 0.2px;
+}
+
+.callback-phone-field {
+    padding-left: 95px !important; /* Extra padding to clear the prefix container */
+}
+
+/* Submit Button */
+.callback-submit-btn {
+    background-color: #d4af37;
+    color: #ffffff;
+    border: none;
+    padding: 15px 25px;
+    font-size: 15.5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    margin-top: 5px;
+}
+
+.callback-submit-btn:hover {
+    background-color: #302f35;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(48, 47, 53, 0.25);
+}
+
+.callback-submit-btn:active {
+    transform: translateY(0);
+}
+
+/* Footer Section of Popup */
+.callback-footer {
+    border-top: 1px solid #f1f2f4;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.callback-secure-text {
+    font-size: 12px;
+    font-style: italic;
+    color: #8c8f94;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.callback-secure-text i {
+    color: #28a745;
+}
+
+.callback-links-block {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 13.5px;
+    color: #6c6c72;
+}
+
+.callback-link-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.callback-link-row a {
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1.5px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.callback-link-row a:hover {
+    color: #302f35;
+    border-bottom-color: #302f35;
+}
+
+.callback-hint-text {
+    font-size: 11px;
+    color: #9a9a9e;
+    margin-top: 2px;
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+@media screen and (max-width: 580px) {
+    .callback-modal-card {
+        padding: 35px 25px;
+        border-radius: 16px;
+    }
+    
+    .callback-title-small {
+        font-size: 21px;
+    }
+    
+    .callback-title-accent {
+        font-size: 24px;
+    }
+    
+    .callback-subtitle {
+        font-size: 13px;
+    }
+    
+    .callback-input-field {
+        font-size: 14px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+    
+    .callback-phone-field {
+        padding-left: 92px !important;
+    }
+    
+    .callback-submit-btn {
+        padding: 13px 20px;
+        font-size: 14px;
+    }
+    
+    .callback-links-block {
+        font-size: 12.5px;
+    }
+}
