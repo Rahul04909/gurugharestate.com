@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GuruGhar Estate | Premier Real Estate Construction & Consultancy in Faridabad</title>
+    <title>GuruGhar Estate | Top Real Estate Services in Faridabad Haryana</title>
     <meta name="description" content="GuruGhar Estate is a premier real estate construction and consultancy company in Faridabad, Delhi NCR, delivering high-quality residential homes and premium builder floors.">
     <meta name="keywords" content="GuruGhar Estate, Real Estate Faridabad, Builder Floors Faridabad, Real Estate Delhi NCR, Construction Faridabad, Property Consultancy, Luxury Floors">
     <link rel="icon" href="assets/favicon.png?v=<?= time() ?>" type="image/png">

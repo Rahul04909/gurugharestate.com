@@ -70,7 +70,7 @@
                 </div>
                 <div class="callback-link-row">
                     <span>In a hurry? Call us now</span>
-                    <a href="tel:+919999566126">+91 99995 66126</a>
+                    <a href="tel:+919999566126">+91 78277 71777</a>
                 </div>
                 <p class="callback-hint-text">*Please enter your 10-digit mobile number.</p>
             </div>
